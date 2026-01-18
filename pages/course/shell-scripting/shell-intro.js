@@ -54,7 +54,7 @@ export default function IntroductionToShellScriptingPage() {
             Shell Scripting · Lesson 1
           </p>
 
-          <h1 className="mt-1 text-3xl font-semibold text-[#ff5b5b]">
+          <h1 className="mt-1 text-3xl font-semibold text-[#22c55e]">
             Introduction to Shell Scripting
           </h1>
 
@@ -102,7 +102,7 @@ export default function IntroductionToShellScriptingPage() {
         >
           {/* WHAT & WHY */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold text-[#22c55e]">
               What is a shell? What is a shell script?
             </h2>
 
@@ -144,7 +144,7 @@ export default function IntroductionToShellScriptingPage() {
 
           {/* HOW SHELL EXECUTES COMMANDS */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold text-[#22c55e]">
               How does the shell execute commands?
             </h2>
             <p>
@@ -188,7 +188,7 @@ echo $?   # 0 means success`}
 
           {/* FIRST SCRIPT */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold text-[#22c55e]">
               Writing your first shell script (safely)
             </h2>
 
@@ -261,7 +261,7 @@ bash first_script.sh`}
 
           {/* WHERE TO STORE SCRIPTS / PERMISSIONS */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold text-[#22c55e]">
               Where to keep scripts & basic permissions
             </h2>
 
@@ -308,7 +308,7 @@ first_script.sh`}
 
           {/* REAL USE CASE EXAMPLES */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold text-[#22c55e]">
               Practical use cases even for beginners
             </h2>
 

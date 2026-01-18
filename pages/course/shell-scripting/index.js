@@ -17,7 +17,7 @@ export default function ShellOverviewPage() {
 
       <ShellLayout>
         <header className="mb-6">
-          <h1 className="text-2xl font-semibold text-[#ff5b5b] md:text-3xl">
+          <h1 className="text-2xl font-semibold text-[#22c55e] md:text-3xl">
             Shell Scripting Course
           </h1>
           <p className="mt-1 text-sm text-slate-300">
@@ -43,7 +43,7 @@ export default function ShellOverviewPage() {
           <hr className="border-slate-800" />
 
           <section>
-            <h2 className="text-lg font-semibold text-[#ff5b5b]">
+            <h2 className="text-lg font-semibold text-[#22c55e]">
               Prerequisites
             </h2>
             <p className="mt-2">
@@ -61,7 +61,7 @@ export default function ShellOverviewPage() {
           <hr className="border-slate-800" />
 
           <section>
-            <h2 className="text-lg font-semibold text-[#ff5b5b]">
+            <h2 className="text-lg font-semibold text-[#22c55e]">
               Who Should Enroll?
             </h2>
             <p className="mt-2">This course is ideal for:</p>
@@ -80,7 +80,7 @@ export default function ShellOverviewPage() {
           <hr className="border-slate-800" />
 
           <section>
-            <h2 className="text-lg font-semibold text-[#ff5b5b]">
+            <h2 className="text-lg font-semibold text-[#22c55e]">
               Course Format
             </h2>
             <p className="mt-2">This course includes:</p>
