@@ -6,183 +6,205 @@ export const ShellLessons = [
     slug: "shell-intro",
     title: "Introduction to Shell Scripting",
     short:
-      "What is a shell, what is a shell script, why we use it, and how to run your first script safely.",
+      "Understand what is a shell and what is shell scripting in Linux. Learn why shell scripts are used for automation and administration. Run your first script safely with correct permissions. Overview of bash, sh and real world use cases.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   },
+
   {
     id: "linux-shell",
     slug: "linux-shell",
     title: "Linux Shell Basics",
     short:
-      "Linux Shell Basics",
+      "Learn Linux terminal and shell environment from scratch. Understand bash prompt, commands and execution flow. Difference between interactive and non-interactive shell. Foundation for becoming Linux and DevOps engineer.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   },
+
   {
     id: "shebang",
     slug: "shebang",
     title: "Shebang",
     short:
-      "shebang",
+      "Understand the role of shebang (#!) in shell scripts. Learn how interpreter path works in Linux. Difference between bash, sh and other interpreters. Best practices for portable scripts.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   },
+
   {
     id: "first-script",
     slug: "first-script",
     title: "First Basic Script",
     short:
-      "First Basic Script",
+      "Create your first shell script step by step. Set executable permission using chmod. Run script in different ways. Common beginner mistakes and solutions.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   },
+
   {
     id: "comments-in-shell",
     slug: "comments-in-shell",
     title: "Comments",
     short:
-      "comments-in-shell",
+      "Use comments to document shell scripts properly. Single line and multi line comment techniques. Writing readable production scripts. Industry standard documentation style.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   },
+
   {
     id: "variables",
     slug: "variables",
     title: "Variables",
     short:
-      "variables",
+      "Understand variables in shell scripting. System and user defined variables. Rules for naming variables. Using variables in real automation scripts.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   },
+
   {
     id: "user-input",
     slug: "user-input",
     title: "User Input",
     short:
-      "Handling User Input",
+      "Take input from user using read command. Create interactive shell scripts. Validate user input. Build dynamic scripts based on user response.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   },
+
   {
     id: "conditional-statements",
     slug: "conditional-statements",
     title: "Conditional Statements",
     short:
-      "Managing Conditional Statements",
+      "Use if else conditions in shell scripting. Compare numbers and strings. Test command and operators. Build decision making logic like real projects.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   },
+
   {
     id: "loops-introduction",
     slug: "loops-introduction",
     title: "Loops in Shell Scripting",
     short:
-      "Using the loops in shell script",
+      "Introduction to looping concepts in shell. Automate repetitive tasks. Understand iteration logic. Foundation for automation projects.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   },
+
   {
     id: "for-loop",
     slug: "for-loop",
     title: "For Loop",
     short:
-      "For Loop in Shell Script",
+      "Master for loop in bash scripting. Iterate over files and values. Real examples like log cleanup. Most used loop in automation.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   },
+
   {
     id: "while-loop",
     slug: "while-loop",
     title: "While Loop",
     short:
-      "While Loop in Shell Scripting",
+      "Use while loop for condition based execution. Read files line by line. Monitor services using loops. Practical admin scenarios.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   },
+
   {
     id: "until-loop",
     slug: "until-loop",
     title: "Until Loop",
     short:
-      "Until Loop in Shell Scripting",
+      "Understand until loop behavior in shell scripting. Difference between while and until. Retry mechanism using until. Production use cases.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   },
+
   {
     id: "case-statement",
     slug: "case-statement",
     title: "Case Statement",
     short:
-      "Case Statement in Shell Scripting",
+      "Implement menu driven scripts using case statement. Pattern matching in bash. Replace multiple if conditions. Professional script design.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   },
+
   {
     id: "functions",
     slug: "functions",
     title: "Function in Shell Scripting",
     short:
-      "Using the Function in Shell Scripting",
+      "Create reusable functions in shell scripts. Modular programming concept. Reduce duplicate code. Industry standard scripting method.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   },
+
   {
     id: "function-arguments",
     slug: "function-arguments",
     title: "Function Arguments",
     short:
-      "Passing and Accessing the Function Arguments",
+      "Pass arguments to shell functions. Access parameters inside function. Build dynamic reusable code. Real automation examples.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   },
+
   {
     id: "script-arguments",
     slug: "script-arguments",
     title: "Script Arguments",
     short:
-      "Passing and Accessing the Script Arguments",
+      "Pass arguments to shell script from command line. Use $1 $2 and special variables. Create flexible admin scripts. Production style usage.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   },
+
   {
     id: "exit-status",
     slug: "exit-status",
     title: "Exit Status",
     short:
-      "Exit Status",
+      "Understand exit status in Linux commands. Use $? in scripts. Error handling technique. Build reliable automation scripts.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   },
+
   {
     id: "debugging-and-traps",
     slug: "debugging-and-traps",
-    title: "Debugging-and Traps",
+    title: "Debugging and Traps",
     short:
-      "debugging-and-traps",
+      "Debug shell scripts using bash options. Use set -x and set -e. Handle signals with trap. Professional troubleshooting methods.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   },
+
   {
     id: "io-redirection",
     slug: "io-redirection",
     title: "I/O Redirection",
     short:
-      "I/O Redirection in Shell Script",
+      "Input output redirection in Linux shell. Use > >> and pipes. Redirect errors and logs. Important concept for automation.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   },
+
   {
     id: "crontab-scheduling",
     slug: "crontab-scheduling",
     title: "Crontab Scheduling",
     short:
-      "Crontab Scheduling",
+      "Schedule shell scripts using cron jobs. Automate daily tasks. Crontab syntax explained. Real server automation examples.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   },
+
   {
     id: "backup-automation",
     slug: "backup-automation",
     title: "Backup Automation",
     short:
-      "Backup Automation using Shell Script",
+      "Create real backup automation script. Compress and rotate backups. Add logging and alerts. Production ready project.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   },
+
   {
     id: "system-monitoring",
     slug: "system-monitoring",
     title: "System Monitoring Project",
     short:
-      "System Monitoring Project",
+      "Build system monitoring using shell script. CPU memory disk alerts. Email notification integration. DevOps level project.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   },
+
   {
     id: "best-practices",
     slug: "best-practices",
     title: "Best Practices",
     short:
-      "",
+      "Shell scripting best practices and coding standards. Error handling and logging. Writing secure scripts. Interview and industry tips.",
     videoUrl: "https://www.youtube.com/embed/YOUR_INTRO_VIDEO_ID",
   }  
 ];

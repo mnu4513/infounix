@@ -13,7 +13,6 @@ import {
   FiShield,
   FiArrowRight,
 } from "react-icons/fi";
-import Image from "next/image";
 
 import SolarisLayout from "../../../components/solaris/SolarisLayout";
 import { solarisLessons } from "../../../components/solaris/SolarisLessons";
@@ -365,21 +364,21 @@ export default function PatchManagementPage() {
           <div className="mt-3 gap-y-3">
             {/* EXAMPLE: replace src with your Cloudinary URLs */}
             <div className="overflow-hidden rounded-xl border border-slate-800 bg-slate-900/80">
-              <Image
+              <img
                 src="https://res.cloudinary.com/dyjpzvstq/image/upload/v1709985632/mypopnykectzb02cwvqv"
                 alt="My Oracle Support - search SRU"
                 className="h-full w-full object-cover"
               />
             </div>
             <div className="overflow-hidden rounded-xl border my-3 border-slate-800 bg-slate-900/80">
-              <Image
+              <img
                 src="https://res.cloudinary.com/dyjpzvstq/image/upload/v1709985632/nrexg1pfgyx65jyjfh9a"
                 alt="Download zipped SRU repository"
                 className="h-full w-full object-cover"
               />
             </div>
             <div className="overflow-hidden rounded-xl border border-slate-800 bg-slate-900/80">
-              <Image
+              <img
                 src="https://res.cloudinary.com/dyjpzvstq/image/upload/v1709985632/gph6zgiyjynsrzgoaauo"
                 alt="Download zipped SRU repository"
                 className="h-full w-full object-cover"
