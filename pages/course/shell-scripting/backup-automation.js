@@ -14,7 +14,7 @@ export default function BackupAutomation() {
 
       <h1 className="text-2xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">Backup Automation Script</h1>
 
-      <p className="mt-2 text-slate-300">
+      <p className="mt-2 dark:text-slate-300">
         This script creates compressed backups with timestamps.
       </p>
 
@@ -32,7 +32,7 @@ tar -czf $DEST/backup_$DATE.tar.gz $SOURCE
 echo "Backup completed successfully"`}
       />
 
-      <p className="mt-4 text-slate-300">
+      <p className="mt-4 dark:text-slate-300">
         This script can be scheduled using cron for automated backups.
       </p>
     </ShellLayout>

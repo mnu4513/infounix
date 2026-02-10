@@ -12,7 +12,7 @@ export default function BestPractices() {
         <title>Shell Scripting Best Practices | InfoUnix</title>
       </Head>
 
-      <h1 className="text-2xl font-semibold text-[#22c55e]">
+      <h1 className="text-2xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
         Shell Scripting Best Practices & Interview Tips
       </h1>
 

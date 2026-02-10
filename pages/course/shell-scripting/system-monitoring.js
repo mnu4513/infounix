@@ -12,7 +12,7 @@ export default function MonitoringScript() {
         <title>System Monitoring Script | Shell Scripting</title>
       </Head>
 
-      <h1 className="text-2xl font-semibold text-[#22c55e]">
+      <h1 className="text-2xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
         Simple System Monitoring Script
       </h1>
 
@@ -28,7 +28,7 @@ echo "CPU Usage: $CPU%"
 echo "Memory Used: $MEM MB"
 echo "Disk Usage: $DISK"`} />
 
-      <p className="mt-4 text-slate-300">
+      <p className="mt-4 dark:text-slate-300">
         This script helps monitor system health in real-time.
       </p>
     </ShellLayout>

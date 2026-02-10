@@ -106,11 +106,11 @@ export default function DebuggingPage() {
           <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
             Shell Scripting · Lesson 18
           </p>
-          <h1 className="mt-1 text-2xl font-semibold text-[#22c55e] md:text-3xl">
+          <h1 className="mt-1 text-2xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent md:text-3xl">
             {lesson.title || "Debugging & Traps in Shell Scripting"}
           </h1>
           {lesson.short && (
-            <p className="mt-1 max-w-2xl text-sm text-slate-300">
+            <p className="mt-1 max-w-2xl text-sm dark:text-slate-300">
               {lesson.short}
             </p>
           )}
@@ -149,11 +149,11 @@ export default function DebuggingPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.15)}
-          className="space-y-8 text-sm leading-relaxed text-slate-200"
+          className="space-y-8 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* WHAT IS DEBUGGING */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#22c55e]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               What is Debugging?
             </h2>
             <p>
@@ -164,7 +164,7 @@ export default function DebuggingPage() {
 
           {/* WHY DEBUGGING */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#22c55e]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Why Debugging is Important?
             </h2>
             <div className="grid gap-4 md:grid-cols-3">
@@ -188,10 +188,10 @@ export default function DebuggingPage() {
 
           {/* DEBUGGING TOOLS */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#22c55e]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Debugging Tools in Shell
             </h2>
-            <ul className="list-disc pl-5 text-slate-300">
+            <ul className="list-disc pl-5 dark:text-slate-300">
               <li><code>set -x</code> – Print commands before execution</li>
               <li><code>set -e</code> – Exit on error</li>
               <li><code>set -u</code> – Treat unset variables as errors</li>
@@ -201,16 +201,16 @@ export default function DebuggingPage() {
 
           {/* EXAMPLES */}
           <section className="space-y-5">
-            <h2 className="text-base font-semibold text-[#22c55e]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Debugging Examples
             </h2>
 
             {debugExamples.map((item, index) => (
               <div key={item.id} className="space-y-2">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold dark:text-slate-100">
                   {index + 1}. {item.title}
                 </h3>
-                <p className="text-xs text-slate-300">
+                <p className="text-xs dark:text-slate-300">
                   {item.description}
                 </p>
                 <TerminalOutput
@@ -225,7 +225,7 @@ export default function DebuggingPage() {
 
           {/* BEST PRACTICES */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#22c55e]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Best Practices
             </h2>
             <BulletCard
@@ -241,15 +241,15 @@ export default function DebuggingPage() {
 
           {/* PRACTICE */}
           <section className="space-y-3 rounded-2xl border border-green-500/40 bg-green-500/10 p-4 shadow-lg shadow-green-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-green-200">
+            <h2 className="flex items-center gap-2 text-sm font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Practice Task – Debugging
             </h2>
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-green-50">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-green-50">
               <li>Create a script that exits on error.</li>
               <li>Use trap to catch Ctrl+C.</li>
               <li>Enable debug mode and observe output.</li>
             </ul>
-            <p className="mt-2 flex items-center gap-1 text-[12px] text-green-200">
+            <p className="mt-2 flex items-center gap-1 text-[12px] text-green-600">
               Next lesson: Logging & Redirection
               <FiArrowRight className="text-xs" />
             </p>

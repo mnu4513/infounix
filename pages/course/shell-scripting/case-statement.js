@@ -128,11 +128,11 @@ export default function CaseStatementPage() {
           <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
             Shell Scripting · Lesson 13
           </p>
-          <h1 className="mt-1 text-2xl font-semibold text-[#22c55e] md:text-3xl">
+          <h1 className="mt-1 text-2xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent md:text-3xl">
             {lesson.title || "Case Statement in Shell Scripting"}
           </h1>
           {lesson.short && (
-            <p className="mt-1 max-w-2xl text-sm text-slate-300">
+            <p className="mt-1 max-w-2xl text-sm dark:text-slate-300">
               {lesson.short}
             </p>
           )}
@@ -171,11 +171,11 @@ export default function CaseStatementPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.15)}
-          className="space-y-8 text-sm leading-relaxed text-slate-200"
+          className="space-y-8 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* WHAT IS CASE */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#22c55e]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               What is a Case Statement?
             </h2>
             <p>
@@ -189,7 +189,7 @@ export default function CaseStatementPage() {
 
           {/* WHY CASE */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#22c55e]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Why Use Case Statement?
             </h2>
             <div className="grid gap-4 md:grid-cols-3">
@@ -213,7 +213,7 @@ export default function CaseStatementPage() {
 
           {/* SYNTAX */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#22c55e]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Case Statement Syntax
             </h2>
             <TerminalOutput
@@ -236,16 +236,16 @@ esac`}
 
           {/* EXAMPLES */}
           <section className="space-y-5">
-            <h2 className="text-base font-semibold text-[#22c55e]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Case Statement Examples
             </h2>
 
             {caseExamples.map((item, index) => (
               <div key={item.id} className="space-y-2">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold dark:text-slate-100">
                   {index + 1}. {item.title}
                 </h3>
-                <p className="text-xs text-slate-300">
+                <p className="text-xs dark:text-slate-300">
                   {item.description}
                 </p>
                 <TerminalOutput
@@ -260,7 +260,7 @@ esac`}
 
           {/* BEST PRACTICES */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#22c55e]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Best Practices
             </h2>
             <BulletCard
@@ -276,15 +276,15 @@ esac`}
 
           {/* PRACTICE */}
           <section className="space-y-3 rounded-2xl border border-green-500/40 bg-green-500/10 p-4 shadow-lg shadow-green-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-green-200">
+            <h2 className="flex items-center gap-2 text-sm font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Practice Task – Case Statement
             </h2>
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-green-50">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-green-50">
               <li>Create a menu-driven calculator.</li>
               <li>Build a menu to start/stop a service.</li>
               <li>Use case to check file types.</li>
             </ul>
-            <p className="mt-2 flex items-center gap-1 text-[12px] text-green-200">
+            <p className="mt-2 flex items-center gap-1 text-[12px] text-green-600">
               Next lesson: Functions in Shell Scripting
               <FiArrowRight className="text-xs" />
             </p>

@@ -357,7 +357,7 @@ done`}
 
           {/* NEXT STEPS */}
           <section className="space-y-3 rounded-2xl border border-emerald-500/50 bg-emerald-500/10 p-4 shadow-lg shadow-emerald-900/40">
-            <h2 className="text-sm font-semibold text-emerald-600">
+            <h2 className="text-sm font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               What you should be comfortable with after this lesson
             </h2>
             <ul className="list-disc pl-5 text-[13px] dark:text-emerald-50 space-y-1">

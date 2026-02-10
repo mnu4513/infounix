@@ -23,11 +23,11 @@ export default function CronTabPage() {
 
       <ShellLayout activeSlug="crontab">
         <motion.div initial="hidden" animate="visible" variants={fadeUp(0)}>
-          <h1 className="text-2xl font-semibold text-[#22c55e]">
+          <h1 className="text-2xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
             Scheduling Scripts with Crontab
           </h1>
 
-          <p className="mt-2 text-slate-300">
+          <p className="mt-2 dark:text-slate-300">
             Cron is a time-based job scheduler in Linux used to run scripts automatically.
           </p>
 
