@@ -102,10 +102,10 @@ export default function LdomsGuestCreationPage() {
           <p className="text-xs tracking-[0.3em] text-slate-400">
             Solaris SPARC · LDOMs · Guest
           </p>
-          <h1 className="mt-1 text-3xl font-semibold text-[#ff5b5b]">
+          <h1 className="mt-1 text-3xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
             Creating Guest Domains (LDOMs)
           </h1>
-          <p className="mt-2 max-w-3xl text-sm text-slate-300">
+          <p className="mt-2 max-w-3xl text-sm dark:text-slate-300">
             Guest domains are where your applications actually run. In this
             lesson you will create a simple guest LDOM: assign CPU, memory,
             virtual disks, virtual network and start the OS installation.
@@ -143,10 +143,10 @@ export default function LdomsGuestCreationPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.1)}
-          className="space-y-10 text-sm leading-relaxed text-slate-200"
+          className="space-y-10 text-sm leading-relaxed dark:text-slate-200"
         >
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               High-level steps to build a guest domain
             </h2>
 
@@ -179,16 +179,16 @@ export default function LdomsGuestCreationPage() {
           </section>
 
           <section className="space-y-6">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Commands and examples
             </h2>
 
             {guestSnips.map((s, i) => (
               <div key={i} className="space-y-1">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold dark:text-slate-100">
                   {i + 1}. {s.title}
                 </h3>
-                <p className="text-xs text-slate-400">{s.desc}</p>
+                <p className="text-xs dark:text-slate-400">{s.desc}</p>
                 <TerminalOutput
                   content={s.content}
                   title="terminal — guest domain"

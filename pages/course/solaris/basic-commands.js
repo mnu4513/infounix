@@ -86,11 +86,11 @@ export default function BasicCommandsPage() {
           <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
             Solaris · Lesson 3
           </p>
-          <h1 className="mt-1 text-2xl font-semibold text-[#ff5b5b] md:text-3xl">
+          <h1 className="mt-1 text-2xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent md:text-3xl">
             {lesson.title || "Basic Commands in Solaris"}
           </h1>
           {lesson.short && (
-            <p className="mt-1 max-w-2xl text-sm text-slate-300">
+            <p className="mt-1 max-w-2xl text-sm dark:text-slate-300">
               {lesson.short}
             </p>
           )}
@@ -130,11 +130,11 @@ export default function BasicCommandsPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.15)}
-          className="space-y-8 text-sm leading-relaxed text-slate-200"
+          className="space-y-8 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* Overview */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Why start with basic commands?
             </h2>
             <p>
@@ -156,7 +156,7 @@ export default function BasicCommandsPage() {
 
           {/* A nice terminal demo */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Basic command flow in a Solaris session
             </h2>
             <p>
@@ -174,7 +174,7 @@ export default function BasicCommandsPage() {
 
           {/* Command categories */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Command categories you should know
             </h2>
             <p>
@@ -209,7 +209,7 @@ export default function BasicCommandsPage() {
 
           {/* Detailed breakdown */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Important commands in this lesson
             </h2>
 
@@ -255,10 +255,10 @@ export default function BasicCommandsPage() {
 
           {/* Practice section */}
           <section className="space-y-3 rounded-2xl border border-sky-600/50 bg-sky-500/10 p-4 shadow-lg shadow-sky-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-sky-200">
+            <h2 className="flex items-center gap-2 text-sm font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Practice task – do this on your VMware lab
             </h2>
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-sky-50">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-sky-50">
               <li>
                 Login to your Solaris VM and run all commands shown in the
                 terminal demo above.
@@ -277,7 +277,7 @@ export default function BasicCommandsPage() {
                 comfortable typing and reading the outputs.
               </li>
             </ul>
-            <p className="mt-2 flex items-center gap-1 text-[12px] text-sky-200">
+            <p className="mt-2 flex items-center gap-1 text-[12px] text-sky-600">
               Next up, we move to user and group management where these basic
               commands will keep helping you.
               <FiArrowRight className="text-xs" />

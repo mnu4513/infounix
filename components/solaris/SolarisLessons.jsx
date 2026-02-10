@@ -179,13 +179,6 @@ export const solarisLessons = [
     short: "pre & post check on reboot.",
     videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
   },
-  {
-    id: "ldom",
-    slug: "ldom",
-    title: "LDOM",
-    short: "Logical domains in Solaris.",
-    videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
-  },
     {
     id: "zones",
     slug: "zones",

@@ -213,10 +213,10 @@ export default function CrontabAtPage() {
           <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
             Solaris · Lesson 25
           </p>
-          <h1 className="mt-1 text-3xl font-semibold text-[#ff5b5b]">
+          <h1 className="mt-1 text-3xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
             {lesson.title || "Crontab & at in Solaris"}
           </h1>
-          <p className="mt-1 max-w-3xl text-sm text-slate-300">
+          <p className="mt-1 max-w-3xl text-sm dark:text-slate-300">
             cron is used for recurring scheduled jobs; at is used for one-time
             jobs at a specific time. In this lesson, you&apos;ll learn when to
             use which, how to write crontab entries, and how to control which
@@ -255,11 +255,11 @@ export default function CrontabAtPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.1)}
-          className="space-y-10 text-sm leading-relaxed text-slate-200"
+          className="space-y-10 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* WHAT / WHY / WHERE TO USE */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               What are cron and at? When to use them?
             </h2>
             <p>
@@ -302,7 +302,7 @@ export default function CrontabAtPage() {
 
           {/* When NOT to use */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               When NOT to use cron/at
             </h2>
             <BulletCard
@@ -318,7 +318,7 @@ export default function CrontabAtPage() {
 
           {/* DIFF BETWEEN CRON & AT */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Difference between cron and at (Solaris)
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
@@ -345,16 +345,16 @@ export default function CrontabAtPage() {
 
           {/* TERMINAL SNIPPETS */}
           <section className="space-y-6">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Cron format, examples, allow/deny, and at usage
             </h2>
 
             {cronAtSnippets.map((snippet, index) => (
               <div key={snippet.id} className="space-y-1">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold dark:text-slate-100">
                   {index + 1}. {snippet.title}
                 </h3>
-                <p className="text-xs text-slate-400">{snippet.description}</p>
+                <p className="text-xs dark:text-slate-400">{snippet.description}</p>
                 <TerminalOutput
                   content={snippet.content}
                   title="terminal — cron/at"
@@ -367,11 +367,11 @@ export default function CrontabAtPage() {
 
           {/* SECURITY / ALLOW-DENY SUMMARY */}
           <section className="space-y-3 rounded-2xl border border-amber-500/60 bg-amber-500/10 p-4 shadow-lg shadow-amber-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-amber-200">
+            <h2 className="flex items-center gap-2 text-sm font-semibold text-amber-600">
               <FiShield className="text-base" />
               Security: who is allowed to use cron and at?
             </h2>
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-amber-50">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-amber-50">
               <li>
                 Use <code>/etc/cron.d/cron.allow</code> and{" "}
                 <code>/etc/cron.d/cron.deny</code> to control cron use.
@@ -392,11 +392,11 @@ export default function CrontabAtPage() {
 
           {/* SMALL REMINDER BLOCK */}
           <section className="space-y-3 rounded-2xl border border-red-500/50 bg-red-500/10 p-4 shadow-lg shadow-red-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-300">
+            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-600">
               <FiAlertTriangle className="text-base" />
               Important reminders
             </h2>
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-red-200">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-red-200">
               <li>
                 Always use absolute paths in cron and at (e.g.{" "}
                 <code>/usr/bin/find</code> instead of <code>find</code>).

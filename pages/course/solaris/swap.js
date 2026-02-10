@@ -149,10 +149,10 @@ export default function SwapPage() {
           <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
             Solaris · Lesson 21
           </p>
-          <h1 className="mt-1 text-3xl font-semibold text-[#ff5b5b]">
+          <h1 className="mt-1 text-3xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
             {lesson.title || "Swap Management in Solaris"}
           </h1>
-          <p className="mt-1 max-w-3xl text-sm text-slate-300">
+          <p className="mt-1 max-w-3xl text-sm dark:text-slate-300">
             Swap is part of Solaris virtual memory. Understanding the difference
             between physical RAM and swap, and knowing how to create and manage
             ZFS-based swap devices, is critical for real-world administration.
@@ -189,11 +189,11 @@ export default function SwapPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.1)}
-          className="space-y-10 text-sm leading-relaxed text-slate-200"
+          className="space-y-10 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* THEORY: swap vs physical memory */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               What is swap? How is it different from physical memory?
             </h2>
             <p>
@@ -224,7 +224,7 @@ export default function SwapPage() {
 
           {/* THEORY: swap in Solaris & ZFS */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Swap implementation in Solaris (ZFS volumes)
             </h2>
             <p>
@@ -242,7 +242,7 @@ export default function SwapPage() {
 
           {/* TERMINAL EXAMPLES */}
           <section className="space-y-6">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Swap commands and ZFS integration – step by step
             </h2>
             <p>
@@ -252,10 +252,10 @@ export default function SwapPage() {
 
             {swapSnippets.map((snippet, index) => (
               <div key={snippet.id} className="space-y-2">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold dark:text-slate-100">
                   {index + 1}. {snippet.title}
                 </h3>
-                <p className="text-xs text-slate-300">{snippet.description}</p>
+                <p className="text-xs dark:text-slate-300">{snippet.description}</p>
                 <TerminalOutput
                   content={snippet.content}
                   title="terminal — swap"
@@ -268,7 +268,7 @@ export default function SwapPage() {
 
           {/* SUMMARY / CHEAT SHEET */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Command cheat sheet – swap & ZFS
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
@@ -295,11 +295,11 @@ export default function SwapPage() {
 
           {/* SAFETY BOX */}
           <section className="space-y-3 rounded-2xl border border-red-500/60 bg-red-500/10 p-4 shadow-lg shadow-red-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-300">
+            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-600">
               <FiAlertTriangle className="text-base" />
               Important safety notes for swap changes
             </h2>
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-red-200">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-red-200">
               <li>
                 Never remove all swap from a busy system – it may cause
                 performance collapse or even panics under heavy load.
@@ -318,7 +318,7 @@ export default function SwapPage() {
                 are heavily used for swap, to reduce I/O contention.
               </li>
             </ul>
-            <p className="mt-2 flex items-center gap-1 text-[12px] text-red-200">
+            <p className="mt-2 flex items-center gap-1 text-[12px] text-red-600">
               In the next topics, this understanding will help when tuning
               performance, planning memory, and troubleshooting slow systems.
               <FiArrowRight className="text-xs" />

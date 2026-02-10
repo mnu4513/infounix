@@ -19,6 +19,7 @@ import { solarisLessons } from "../../../components/solaris/solarisLessons";
 import FeatureCard from "../../../components/solaris/FeatureCard";
 import BulletCard from "../../../components/solaris/BulletCard";
 import TerminalOutput from "../../../components/TerminalOutput";
+import {img_base_url} from "../../../components/Config";
 
 const fadeUp = (delay = 0) => ({
   hidden: { opacity: 0, y: 30 },
@@ -228,10 +229,10 @@ export default function PatchManagementPage() {
           <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
             Solaris · Lesson 23
           </p>
-          <h1 className="mt-1 text-3xl font-semibold text-[#ff5b5b]">
+          <h1 className="mt-1 text-3xl font-semibold  bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
             {lesson.title || "Patch Management in Solaris 11 (SRU & IPS)"}
           </h1>
-          <p className="mt-1 max-w-3xl text-sm text-slate-300">
+          <p className="mt-1 max-w-3xl text-sm dark:text-slate-300">
             Patching in Solaris 11 is done using IPS and SRU repositories. In
             this lesson you&apos;ll see what patches are, why we apply them, how
             base and SRU repos work, how publishers are configured, and how
@@ -240,60 +241,44 @@ export default function PatchManagementPage() {
           <div className="mt-3 h-px w-full bg-gradient-to-r from-[#ff5b5b] via-slate-700 to-transparent" />
         </motion.header>
 
-        {/* OPTIONAL IMAGE / SHOWERHEAD AREA – MOS DOWNLOAD STEPS */}
-        {/* Replace <img> URLs with your Cloudinary images. If you have a custom ShowerHead component,
-            you can wrap this markup or pass the URLs as props into it. */}
-        <motion.section
+                  {/* VIDEO */}
+        <motion.div
           initial="hidden"
           animate="visible"
-          variants={fadeUp(0.05)}
-          className="mb-8 rounded-2xl border border-slate-800 bg-slate-950/70 p-4 shadow-lg shadow-slate-950/80"
+          variants={fadeUp(0.1)}
+          className="mb-6 overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 shadow-lg shadow-slate-950/80"
         >
-          <h2 className="mb-2 text-sm font-semibold text-[#ff5b5b]">
-            How to download SRU bundle from My Oracle Support (visual guide)
-          </h2>
-          <p className="text-xs text-slate-300">
-            You can use screenshots here to show the MOS flow: login, go to
-            Patches &amp; Updates, search for SRU ID, download zipped repo,
-            verify checksum, etc.
-          </p>
-
-{/* Images */}
-          <div className="mt-3 grid gap-3 md:grid-cols-2">
-            {/* EXAMPLE: replace src with your Cloudinary URLs */}
-            <div className="overflow-hidden rounded-xl border border-slate-800 bg-slate-900/80">
-              <img
-                src="https://res.cloudinary.com/YOUR_ACCOUNT/image/upload/v1234567890/mos_step1.png"
-                alt="My Oracle Support - search SRU"
-                className="h-full w-full object-cover"
+          {lesson.videoUrl ? (
+            <div className="aspect-video w-full">
+              <iframe
+                src={lesson.videoUrl}
+                title={lesson.title || "Installation and Setup"}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="h-full w-full"
               />
             </div>
-            <div className="overflow-hidden rounded-xl border border-slate-800 bg-slate-900/80">
-              <img
-                src="https://res.cloudinary.com/YOUR_ACCOUNT/image/upload/v1234567890/mos_step2.png"
-                alt="Download zipped SRU repository"
-                className="h-full w-full object-cover"
-              />
+          ) : (
+            <div className="flex aspect-video w-full items-center justify-center text-xs text-slate-400">
+              Add the YouTube embed URL for this lesson in{" "}
+              <code className="mx-1 rounded bg-slate-900 px-1">
+                components/solaris/solarisLessons.js
+              </code>
+              .
             </div>
-          </div>
-
-          <p className="mt-2 text-[11px] text-slate-400">
-            If you have a custom <code>ShowerHead</code> component, you can move
-            these images and title into that component and pass your Cloudinary
-            URLs through props.
-          </p>
-        </motion.section>
+          )}
+        </motion.div>
 
         {/* MAIN CONTENT */}
         <motion.div
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.1)}
-          className="space-y-10 text-sm leading-relaxed text-slate-200"
+          className="space-y-10 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* THEORY: what / why / how */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Patching – what, why, how in Solaris 11
             </h2>
             <p>
@@ -325,7 +310,7 @@ export default function PatchManagementPage() {
 
           {/* Base vs SRU repo + publisher */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Base repository, SRU repository and publishers
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
@@ -361,9 +346,83 @@ export default function PatchManagementPage() {
             </div>
           </section>
 
+
+        {/* OPTIONAL IMAGE / SHOWERHEAD AREA – MOS DOWNLOAD STEPS */}
+        {/* Replace <img> URLs with your Cloudinary images. If you have a custom ShowerHead component,
+            you can wrap this markup or pass the URLs as props into it. */}
+         <section className="space-y-3">
+<h2 className="mb-2 text-sm font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
+            How to download SRU bundle from My Oracle Support (visual guide)
+          </h2>
+          <p className="text-xs dark:text-slate-300">
+            You can use screenshots here to show the MOS flow: login, go to
+            Patches &amp; Updates, search for SRU ID, download zipped repo,
+            verify checksum, etc.
+          </p>
+
+{/* Images */}
+          <div className="mt-3 gap-y-3">
+            {/* EXAMPLE: replace src with your Cloudinary URLs */}
+            <div className="overflow-hidden rounded-xl border border-slate-800 bg-slate-900/80">
+              <img
+                src="https://res.cloudinary.com/dyjpzvstq/image/upload/v1709985632/mypopnykectzb02cwvqv"
+                alt="My Oracle Support - search SRU"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="overflow-hidden rounded-xl border my-3 border-slate-800 bg-slate-900/80">
+              <img
+                src="https://res.cloudinary.com/dyjpzvstq/image/upload/v1709985632/nrexg1pfgyx65jyjfh9a"
+                alt="Download zipped SRU repository"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="overflow-hidden rounded-xl border border-slate-800 bg-slate-900/80">
+              <img
+                src="https://res.cloudinary.com/dyjpzvstq/image/upload/v1709985632/gph6zgiyjynsrzgoaauo"
+                alt="Download zipped SRU repository"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+
+          <p className="mt-2 text-[11px] dark:text-slate-400">
+            If you have a custom <code>ShowerHead</code> component, you can move
+            these images and title into that component and pass your Cloudinary
+            URLs through props.
+          </p>
+          </section>
+
+                  {/* VIDEO */}
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp(0.1)}
+          className="mb-6 overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 shadow-lg shadow-slate-950/80"
+        >
+          {lesson.videoUrl ? (
+            <div className="aspect-video w-full">
+              <iframe
+                src={lesson.videoUrl}
+                title={lesson.title || "Installation and Setup"}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="h-full w-full"
+              />
+            </div>
+          ) : (
+            <div className="flex aspect-video w-full items-center justify-center text-xs text-slate-400">
+              Add the YouTube embed URL for this lesson in{" "}
+              <code className="mx-1 rounded bg-slate-900 px-1">
+                components/solaris/solarisLessons.js
+              </code>
+              .
+            </div>
+          )}
+        </motion.div>
           {/* Boot environment theory */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Boot Environment (BE) – what and how
             </h2>
             <p>
@@ -394,7 +453,7 @@ export default function PatchManagementPage() {
 
           {/* Terminal section */}
           <section className="space-y-6">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Full SRU patch flow – step by step (with dry run)
             </h2>
             <p>
@@ -404,10 +463,10 @@ export default function PatchManagementPage() {
 
             {patchSnippets.map((snippet, index) => (
               <div key={snippet.id} className="space-y-2">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold dark:text-slate-100">
                   {index + 1}. {snippet.title}
                 </h3>
-                <p className="text-xs text-slate-300">{snippet.description}</p>
+                <p className="text-xs dark:text-slate-300">{snippet.description}</p>
                 <TerminalOutput
                   content={snippet.content}
                   title="terminal — patch"
@@ -420,7 +479,7 @@ export default function PatchManagementPage() {
 
           {/* Pre/post checklist */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Pre-check and post-check checklist
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
@@ -449,11 +508,11 @@ export default function PatchManagementPage() {
 
           {/* Safety / rollback hint */}
           <section className="space-y-3 rounded-2xl border border-red-500/60 bg-red-500/10 p-4 shadow-lg shadow-red-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-300">
+            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-600">
               <FiAlertTriangle className="text-base" />
               Safety notes & where rollback fits
             </h2>
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-red-200">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-red-200">
               <li>
                 Always test new SRUs in a non-production environment first whenever possible.
               </li>
@@ -469,7 +528,7 @@ export default function PatchManagementPage() {
                 <code>beadm activate &lt;old_BE&gt;</code> and reboot.
               </li>
             </ul>
-            <p className="mt-2 flex items-center gap-1 text-[12px] text-red-200">
+            <p className="mt-2 flex items-center gap-1 text-[12px] text-red-600">
               For detailed rollback and patch-issue scenarios, it&apos;s better
               to have a dedicated lesson (Patch Rollback &amp; Troubleshooting)
               so that this page remains clean and linear.

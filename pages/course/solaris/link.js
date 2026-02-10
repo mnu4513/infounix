@@ -167,11 +167,11 @@ export default function LinkPage() {
           <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
             Solaris · Lesson 14
           </p>
-          <h1 className="mt-1 text-2xl font-semibold text-[#ff5b5b] md:text-3xl">
+          <h1 className="mt-1 text-2xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent md:text-3xl">
             {lesson.title || "Hard Links and Soft Links in Solaris"}
           </h1>
           {lesson.short && (
-            <p className="mt-1 max-w-2xl text-sm text-slate-300">
+            <p className="mt-1 max-w-2xl text-sm dark:text-slate-300">
               {lesson.short}
             </p>
           )}
@@ -211,11 +211,11 @@ export default function LinkPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.15)}
-          className="space-y-8 text-sm leading-relaxed text-slate-200"
+          className="space-y-8 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* Overview */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               What are links in Unix/Solaris?
             </h2>
             <p>
@@ -235,7 +235,7 @@ export default function LinkPage() {
 
           {/* Concept cards: inode + link types */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Inodes, hard links and soft links – conceptually
             </h2>
             <div className="grid gap-4 md:grid-cols-3">
@@ -259,7 +259,7 @@ export default function LinkPage() {
 
           {/* Terminals showing behaviour */}
           <section className="space-y-5">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Step-by-step: hard vs soft links with inodes
             </h2>
             <p>
@@ -270,10 +270,10 @@ export default function LinkPage() {
 
             {linkSnippets.map((snippet, index) => (
               <div key={snippet.id} className="space-y-2">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold dark:text-slate-100">
                   {index + 1}. {snippet.title}
                 </h3>
-                <p className="text-xs text-slate-300">
+                <p className="text-xs dark:text-slate-300">
                   {snippet.description}
                 </p>
                 <TerminalOutput
@@ -288,7 +288,7 @@ export default function LinkPage() {
 
           {/* Comparison section */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Hard link vs soft link – detailed comparison
             </h2>
             <div className="grid gap-3 md:grid-cols-2">
@@ -319,11 +319,11 @@ export default function LinkPage() {
 
           {/* Safety / usage patterns */}
           <section className="space-y-3 rounded-2xl border border-amber-500/60 bg-amber-500/10 p-4 shadow-lg shadow-amber-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-amber-200">
+            <h2 className="flex items-center gap-2 text-sm font-semibold text-amber-600">
               <FiAlertTriangle className="text-base" />
               When to use which type of link?
             </h2>
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-amber-50">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-amber-50">
               <li>
                 Use <span className="font-semibold">soft links</span> when you
                 want flexibility: pointing to directories, crossing filesystems,
@@ -345,7 +345,7 @@ export default function LinkPage() {
                 <code>find /path -xtype l</code>) to avoid surprises.
               </li>
             </ul>
-            <p className="mt-2 flex items-center gap-1 text-[12px] text-amber-200">
+            <p className="mt-2 flex items-center gap-1 text-[12px] text-amber-600">
               Understanding inodes and links will help you a lot when working
               with backups, NFS mounts, ZFS snapshots and even package
               management.

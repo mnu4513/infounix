@@ -50,10 +50,10 @@ export default function LdomsOverviewPage() {
           <p className="text-xs tracking-[0.3em] text-slate-400">
             Solaris SPARC · LDOMs · Concepts
           </p>
-          <h1 className="mt-1 text-3xl font-semibold text-[#ff5b5b]">
+          <h1 className="mt-1 text-3xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
             Oracle VM for SPARC (LDOMs) – Concepts & Architecture
           </h1>
-          <p className="mt-2 max-w-3xl text-sm text-slate-300">
+          <p className="mt-2 max-w-3xl text-sm dark:text-slate-300">
             Oracle VM for SPARC, also called Logical Domains (LDOMs), allows you
             to split a SPARC server into multiple logical machines. Each domain
             runs its own OS instance, with dedicated virtual CPUs, memory and
@@ -92,11 +92,11 @@ export default function LdomsOverviewPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.1)}
-          className="space-y-10 text-sm leading-relaxed text-slate-200"
+          className="space-y-10 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* WHAT & WHY */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               What is Oracle VM for SPARC / LDOM?
             </h2>
             <p>
@@ -141,7 +141,7 @@ export default function LdomsOverviewPage() {
 
           {/* HYPERVISOR & TYPES */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Hypervisor basics – Type 1 vs Type 2 and where LDOMs fits
             </h2>
             <p>
@@ -180,7 +180,7 @@ export default function LdomsOverviewPage() {
 
           {/* HOW LDOM DIFFERS FROM OTHER VIRTUALIZATION */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               How LDOMs differ from other virtualization solutions
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
@@ -205,7 +205,7 @@ export default function LdomsOverviewPage() {
 
           {/* TERMINOLOGY: CONTROL / SERVICE / I/O / GUEST */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Key LDOM terms: primary, control, service, I/O and guest domains
             </h2>
 
@@ -260,11 +260,11 @@ export default function LdomsOverviewPage() {
 
           {/* SUMMARY */}
           <section className="space-y-3 rounded-2xl border border-emerald-500/50 bg-emerald-500/10 p-4 shadow-lg shadow-emerald-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-emerald-200">
+            <h2 className="flex items-center gap-2 text-sm font-semibold text-emerald-600">
               <FiActivity className="text-base" />
               Summary: big picture of LDOMs
             </h2>
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-emerald-50">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-emerald-50">
               <li>SPARC hypervisor (type 1) splits hardware into domains.</li>
               <li>
                 Control/primary domain runs ldmd, manages other domains via{" "}

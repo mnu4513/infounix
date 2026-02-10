@@ -198,11 +198,11 @@ export default function ZonesPage() {
             Solaris · Virtualization
           </p>
 
-          <h1 className="mt-1 text-3xl font-semibold text-[#ff5b5b]">
+          <h1 className="mt-1 text-3xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
             {lesson.title || "Zones & Kernel Zones in Solaris"}
           </h1>
 
-          <p className="mt-1 max-w-3xl text-sm text-slate-300">
+          <p className="mt-1 max-w-3xl text-sm dark:text-slate-300">
             Zones are Solaris&apos;s built-in OS virtualization technology. The
             global zone owns the hardware; non-global zones are isolated
             environments inside the same OS. Kernel zones go one step further:
@@ -243,11 +243,11 @@ export default function ZonesPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.1)}
-          className="space-y-10 text-sm leading-relaxed text-slate-200"
+          className="space-y-10 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* WHAT / WHY OVERVIEW */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               What are Zones in Solaris?
             </h2>
 
@@ -290,7 +290,7 @@ export default function ZonesPage() {
 
           {/* GLOBAL vs NON-GLOBAL vs KERNEL ZONES */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Global Zone, Non-Global Zones, and Kernel Zones – Differences
             </h2>
 
@@ -325,7 +325,7 @@ export default function ZonesPage() {
 
           {/* CHECK WHERE YOU ARE / CAPABILITIES */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Identifying global zone and kernel zone capability
             </h2>
 
@@ -344,7 +344,7 @@ export default function ZonesPage() {
 
           {/* KERNEL ZONES – THEORY */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Kernel Zones – what and why?
             </h2>
 
@@ -379,16 +379,16 @@ export default function ZonesPage() {
 
           {/* KERNEL ZONES – PRACTICAL FLOW */}
           <section className="space-y-6">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Practical: create, install, boot and manage a kernel zone
             </h2>
 
             {/* create */}
             <div className="space-y-2">
-              <h3 className="text-sm font-semibold text-slate-100">
+              <h3 className="text-sm font-semibold dark:text-slate-100">
                 1. Configure kernel zone using zonecfg
               </h3>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs dark:text-slate-400">
                 Define zonepath, memory/CPU caps, network, and other properties.
               </p>
               <TerminalOutput
@@ -401,10 +401,10 @@ export default function ZonesPage() {
 
             {/* install */}
             <div className="space-y-2">
-              <h3 className="text-sm font-semibold text-slate-100">
+              <h3 className="text-sm font-semibold dark:text-slate-100">
                 2. Install the kernel zone
               </h3>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs dark:text-slate-400">
                 This creates the OS image for the kernel zone (root filesystem,
                 packages). It may use local or network IPS repository.
               </p>
@@ -418,10 +418,10 @@ export default function ZonesPage() {
 
             {/* boot & zlogin */}
             <div className="space-y-2">
-              <h3 className="text-sm font-semibold text-slate-100">
+              <h3 className="text-sm font-semibold dark:text-slate-100">
                 3. Boot the kernel zone and log in
               </h3>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs dark:text-slate-400">
                 After boot, use <code>zlogin -C &lt;zone&gt;</code> to access
                 the console for initial configuration.
               </p>
@@ -435,10 +435,10 @@ export default function ZonesPage() {
 
             {/* reboot/halt */}
             <div className="space-y-2">
-              <h3 className="text-sm font-semibold text-slate-100">
+              <h3 className="text-sm font-semibold dark:text-slate-100">
                 4. Reboot / halt kernel zone
               </h3>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs dark:text-slate-400">
                 You can manage kernel zones centrally from the global zone.
               </p>
               <TerminalOutput
@@ -451,10 +451,10 @@ export default function ZonesPage() {
 
             {/* uninstall/delete */}
             <div className="space-y-2">
-              <h3 className="text-sm font-semibold text-slate-100">
+              <h3 className="text-sm font-semibold dark:text-slate-100">
                 5. Uninstall and remove kernel zone (optional)
               </h3>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs dark:text-slate-400">
                 When no longer needed, cleanly uninstall and delete the zone.
               </p>
               <TerminalOutput
@@ -466,7 +466,7 @@ export default function ZonesPage() {
 
             {/* info */}
             <div className="space-y-2">
-              <h3 className="text-sm font-semibold text-slate-100">
+              <h3 className="text-sm font-semibold dark:text-slate-100">
                 6. View configuration anytime
               </h3>
               <TerminalOutput
@@ -479,12 +479,12 @@ export default function ZonesPage() {
 
           {/* BEST PRACTICES / SAFETY */}
           <section className="space-y-3 rounded-2xl border border-red-500/60 bg-red-500/10 p-4 shadow-lg shadow-red-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-300">
+            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-600">
               <FiShield className="text-base" />
               Best practices for working with zones
             </h2>
 
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-red-100">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-red-100">
               <li>
                 Plan CPU and memory allocation; don’t overcommit on production
                 without understanding workload.
@@ -503,7 +503,7 @@ export default function ZonesPage() {
               </li>
             </ul>
 
-            <p className="mt-2 text-[12px] text-red-200 flex items-center gap-1">
+            <p className="mt-2 text-[12px] text-red-600 flex items-center gap-1">
               Once you&apos;re comfortable with zones and kernel zones, Solaris
               becomes a very powerful consolidation and test platform.
               <FiActivity className="text-xs" />

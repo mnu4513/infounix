@@ -259,11 +259,11 @@ export default function NetworkConfigurationPage() {
           <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
             Solaris · Lesson 15
           </p>
-          <h1 className="mt-1 text-2xl font-semibold text-[#ff5b5b] md:text-3xl">
+          <h1 className="mt-1 text-2xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent md:text-3xl">
             {lesson.title || "Network Configuration in Solaris"}
           </h1>
           {lesson.short && (
-            <p className="mt-1 max-w-2xl text-sm text-slate-300">
+            <p className="mt-1 max-w-2xl text-sm dark:text-slate-300">
               {lesson.short}
             </p>
           )}
@@ -305,11 +305,11 @@ export default function NetworkConfigurationPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.15)}
-          className="space-y-8 text-sm leading-relaxed text-slate-200"
+          className="space-y-8 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* Overview / Theory */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Solaris network stack: layers you must understand
             </h2>
             <p>
@@ -324,7 +324,7 @@ export default function NetworkConfigurationPage() {
 
           {/* Concept cards */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Core building blocks: dladm, ipadm, VNIC, IPMP
             </h2>
             <div className="grid gap-4 md:grid-cols-4">
@@ -353,7 +353,7 @@ export default function NetworkConfigurationPage() {
 
           {/* Step-by-step terminals */}
           <section className="space-y-5">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Step-by-step: from discovery to VNIC and IPMP
             </h2>
             <p>
@@ -364,10 +364,10 @@ export default function NetworkConfigurationPage() {
 
             {networkSnippets.map((snippet, index) => (
               <div key={snippet.id} className="space-y-2">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold dark:text-slate-100">
                   {index + 1}. {snippet.title}
                 </h3>
-                <p className="text-xs text-slate-300">
+                <p className="text-xs dark:text-slate-300">
                   {snippet.description}
                 </p>
                 <TerminalOutput
@@ -382,7 +382,7 @@ export default function NetworkConfigurationPage() {
 
           {/* Summary / theory bullets */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Theory recap: where each command fits
             </h2>
             <div className="grid gap-3 md:grid-cols-2">
@@ -411,11 +411,11 @@ export default function NetworkConfigurationPage() {
 
           {/* Safety / best practices */}
           <section className="space-y-3 rounded-2xl border border-amber-500/60 bg-amber-500/10 p-4 shadow-lg shadow-amber-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-amber-200">
+            <h2 className="flex items-center gap-2 text-sm font-semibold text-amber-600">
               <FiAlertTriangle className="text-base" />
               Network configuration safety tips
             </h2>
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-amber-50">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-amber-50">
               <li>
                 When working on remote servers over SSH, be very careful while
                 changing the IP of the interface you are currently using.
@@ -433,7 +433,7 @@ export default function NetworkConfigurationPage() {
                 future admins can understand your design quickly.
               </li>
             </ul>
-            <p className="mt-2 flex items-center gap-1 text-[12px] text-amber-200">
+            <p className="mt-2 flex items-center gap-1 text-[12px] text-amber-600">
               Once you’re comfortable with these tools, networking on Solaris
               (even with zones and virtualisation) becomes much easier to
               reason about.

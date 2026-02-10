@@ -58,11 +58,11 @@ export default function InterviewPreparationPage() {
             Solaris · Interview Preparation
           </p>
 
-          <h1 className="mt-1 text-3xl font-semibold text-[#ff5b5b]">
+          <h1 className="mt-1 text-3xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
             Solaris Interview Preparation — Complete Guide
           </h1>
 
-          <p className="mt-2 max-w-3xl text-sm text-slate-300">
+          <p className="mt-2 max-w-3xl text-sm dark:text-slate-300">
             This final lesson is your Solaris interview playbook. It combines
             concepts, commands, real-world scenarios and typical questions asked
             in L1/L2/L3 Solaris and SPARC admin interviews, so you can answer
@@ -105,11 +105,11 @@ export default function InterviewPreparationPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.1)}
-          className="space-y-10 text-sm leading-relaxed text-slate-200"
+          className="space-y-10 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* LEVEL OVERVIEW */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Interview Structure – Levels & Expectations
             </h2>
 
@@ -143,7 +143,7 @@ export default function InterviewPreparationPage() {
 
           {/* SECTION 1: SMF, RUN LEVELS, REPO.DB */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               SMF, Milestones, Run Levels & repository.db
             </h2>
 
@@ -153,7 +153,7 @@ export default function InterviewPreparationPage() {
               with modern Solaris service management and boot process.
             </p>
 
-            <h3 className="mt-2 text-sm font-semibold text-slate-100">
+            <h3 className="mt-2 text-sm font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Q1: What is SMF? How is it different from init scripts?
             </h3>
             <p>
@@ -195,7 +195,7 @@ svcs -xv svc:/network/ssh:default`}
               </span>
             </p>
 
-            <h3 className="mt-3 text-sm font-semibold text-slate-100">
+            <h3 className="mt-3 text-sm font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Q2: What is a milestone? How is it related to run levels?
             </h3>
             <p>
@@ -224,7 +224,7 @@ svcs milestone
 svcadm milestone -d milestone/multi-user-server:default`}
             />
 
-            <h3 className="mt-3 text-sm font-semibold text-slate-100">
+            <h3 className="mt-3 text-sm font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Q3: What is <code>repository.db</code>? What if it is corrupted?
             </h3>
             <p>
@@ -250,7 +250,7 @@ reboot`}
 
           {/* SECTION 2: ZFS DEEP DIVE */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               ZFS Deep Dive – ARC, L2ARC, ZIL, Snapshots, Send/Receive
             </h2>
 
@@ -265,7 +265,7 @@ reboot`}
               ]}
             />
 
-            <h3 className="mt-2 text-sm font-semibold text-slate-100">
+            <h3 className="mt-2 text-sm font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               ARC, L2ARC, ZIL & SLOG
             </h3>
             <p>
@@ -298,7 +298,7 @@ zpool status appPool`}
               </span>
             </p>
 
-            <h3 className="mt-3 text-sm font-semibold text-slate-100">
+            <h3 className="mt-3 text-sm font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Snapshots, clones, quota vs reservation
             </h3>
 
@@ -328,7 +328,7 @@ zfs set reservation=100G appPool/logs`}
               they can’t fill up the entire pool.
             </p>
 
-            <h3 className="mt-3 text-sm font-semibold text-slate-100">
+            <h3 className="mt-3 text-sm font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               ZFS send/receive – backup and DR
             </h3>
 
@@ -356,7 +356,7 @@ zfs send -i appPool/appFS@day1 appPool/appFS@day2 | \\
 
           {/* SECTION 3: ZONES & KERNEL ZONES */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Zones & Kernel Zones – Concepts and Practical Usage
             </h2>
 
@@ -378,7 +378,7 @@ zfs send -i appPool/appFS@day1 appPool/appFS@day2 | \\
               />
             </div>
 
-            <h3 className="mt-2 text-sm font-semibold text-slate-100">
+            <h3 className="mt-2 text-sm font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Basic zone commands
             </h3>
 
@@ -406,7 +406,7 @@ zoneadm -z appzone boot
 zoneadm -z appzone-clone clone appzone`}
             />
 
-            <h3 className="mt-3 text-sm font-semibold text-slate-100">
+            <h3 className="mt-3 text-sm font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Exclusive-IP vs Shared-IP zones
             </h3>
             <p>
@@ -428,7 +428,7 @@ zoneadm -z appzone-clone clone appzone`}
 
           {/* SECTION 4: LDOMs / ORACLE VM FOR SPARC */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               LDOMs (Oracle VM for SPARC) – Domain Roles & Lifecycle
             </h2>
 
@@ -443,7 +443,7 @@ zoneadm -z appzone-clone clone appzone`}
               ]}
             />
 
-            <h3 className="mt-2 text-sm font-semibold text-slate-100">
+            <h3 className="mt-2 text-sm font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Guest domain lifecycle (create → bind → install → boot)
             </h3>
 
@@ -477,7 +477,7 @@ ldm start ldg1
 ldm console ldg1   # or: telnet localhost 5000`}
             />
 
-            <h3 className="mt-3 text-sm font-semibold text-slate-100">
+            <h3 className="mt-3 text-sm font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Dynamic resource changes (vCPU / memory / vdisk)
             </h3>
 
@@ -497,7 +497,7 @@ ldm add-vdsdev /dev/zvol/dsk/rpool/ldoms/ldg1-data ldg1-data@primary-vds0
 ldm add-vdisk data1 ldg1-data@primary-vds0 ldg1`}
             />
 
-            <h3 className="mt-3 text-sm font-semibold text-slate-100">
+            <h3 className="mt-3 text-sm font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               SP configurations (spconfig) – DR point
             </h3>
             <p>
@@ -530,7 +530,7 @@ ldm add-spconfig prod-layout`}
 
           {/* SECTION 5: NETWORKING */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Networking – ipadm, dladm, IPMP
             </h2>
 
@@ -569,7 +569,7 @@ ipmpstat -i`}
 
           {/* SECTION 6: PATCHING / IPS / BEADR */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Patching & IPS – Solaris 10 vs Solaris 11
             </h2>
 
@@ -619,7 +619,7 @@ init 6`}
 
           {/* SECTION 7: TROUBLESHOOTING SCENARIOS */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Real Troubleshooting Scenarios (L2/L3 Style)
             </h2>
 
@@ -666,7 +666,7 @@ zpool replace rpool c3t0d0 c3t1d0`}
 
           {/* SECTION 8: HR / BEHAVIOURAL & CHECKLIST */}
           <section className="space-y-4 rounded-2xl border border-[#ff5b5b]/60 bg-[#ff5b5b]/10 p-4 shadow-lg shadow-[#ff5b5b]/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-200">
+            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-600">
               <FiCloudLightning className="text-base" />
               HR & Behavioural Questions + Final Checklist
             </h2>
@@ -691,12 +691,12 @@ zpool replace rpool c3t0d0 c3t1d0`}
             />
 
             <div className="mt-3 flex items-start gap-2">
-              <FiSearch className="mt-0.5 text-sm text-red-200" />
+              <FiSearch className="mt-0.5 text-sm text-red-600" />
               <div>
-                <h3 className="text-xs font-semibold text-red-100">
+                <h3 className="text-xs font-semibold text-red-600">
                   Last-minute revision checklist
                 </h3>
-                <ul className="mt-1 list-disc pl-5 text-[13px] text-red-50 space-y-1">
+                <ul className="mt-1 list-disc pl-5 text-[13px] dark:text-red-50 space-y-1">
                   <li>ZFS: list, snapshot, clone, send/receive, quota/reservation.</li>
                   <li>Zones: create, clone, migrate, troubleshoot incomplete zone.</li>
                   <li>Kernel zones: create, boot, memory/CPU caps.</li>

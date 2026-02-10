@@ -55,11 +55,11 @@ export default function InstallationAndSetupPage() {
           <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
             Solaris · Lesson 2
           </p>
-          <h1 className="mt-1 text-2xl font-semibold text-[#ff5b5b] md:text-3xl">
+          <h1 className="mt-1 text-2xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent md:text-3xl">
             {lesson.title || "Installation and Setup (VMware Lab)"}
           </h1>
           {lesson.short && (
-            <p className="mt-1 max-w-2xl text-sm text-slate-300">
+            <p className="mt-1 max-w-2xl text-sm dark:text-slate-300">
               {lesson.short}
             </p>
           )}
@@ -99,11 +99,11 @@ export default function InstallationAndSetupPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.15)}
-          className="space-y-8 text-sm leading-relaxed text-slate-200"
+          className="space-y-8 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* Overview */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Objective of this lesson
             </h2>
             <p>
@@ -126,7 +126,7 @@ export default function InstallationAndSetupPage() {
 
           {/* Requirements / Environment */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               System requirements for the lab
             </h2>
             <p>
@@ -155,7 +155,7 @@ export default function InstallationAndSetupPage() {
 
           {/* Step 1: Install VMware */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Step 1 – Install VMware Workstation / Player
             </h2>
             <p>
@@ -183,7 +183,7 @@ export default function InstallationAndSetupPage() {
 
           {/* Step 2: Download Solaris ISO */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Step 2 – Download Solaris 11 ISO
             </h2>
             <p>
@@ -212,7 +212,7 @@ export default function InstallationAndSetupPage() {
 
           {/* Step 3: Create VM */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Step 3 – Create a new Solaris VM in VMware
             </h2>
             <p>
@@ -249,7 +249,7 @@ export default function InstallationAndSetupPage() {
 
           {/* Step 4: Attach ISO & Install */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Step 4 – Attach ISO and install Solaris
             </h2>
             <p>
@@ -281,10 +281,10 @@ export default function InstallationAndSetupPage() {
 
           {/* Lab recap / Next steps */}
           <section className="space-y-3 rounded-2xl border border-emerald-500/50 bg-emerald-500/10 p-4 shadow-lg shadow-emerald-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-emerald-200">
+            <h2 className="flex items-center gap-2 text-sm font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               What you should have after this lesson
             </h2>
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-emerald-50">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-emerald-50">
               <li>VMware installed and working on your host machine.</li>
               <li>A Solaris 11 ISO downloaded and stored safely.</li>
               <li>
@@ -292,7 +292,7 @@ export default function InstallationAndSetupPage() {
                 into anytime.
               </li>
             </ul>
-            <p className="mt-2 flex items-center gap-1 text-[12px] text-emerald-200">
+            <p className="mt-2 flex items-center gap-1 text-[12px] text-emerald-600">
               From the next lessons onwards, we will use this same VM to explore
               commands, users, groups, ZFS, SMF and much more.
               <FiArrowRight className="text-xs" />

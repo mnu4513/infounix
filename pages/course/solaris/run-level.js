@@ -147,11 +147,11 @@ export default function RunLevelsPage() {
             Solaris · Run Levels
           </p>
 
-          <h1 className="mt-1 text-3xl font-semibold text-[#ff5b5b]">
+          <h1 className="mt-1 text-3xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
             {lesson.title || "Run Levels in Solaris"}
           </h1>
 
-          <p className="mt-1 max-w-3xl text-sm text-slate-300">
+          <p className="mt-1 max-w-3xl text-sm dark:text-slate-300">
             Run levels control the overall state of a Solaris system: from halt
             (0) to single-user (S) to full multi-user with networking (3) and
             reboot (6). Modern Solaris uses SMF milestones internally, but run
@@ -162,45 +162,51 @@ export default function RunLevelsPage() {
           <div className="mt-3 h-px w-full bg-gradient-to-r from-[#ff5b5b] via-slate-700 to-transparent" />
         </motion.header>
 
-        {/* IMAGE BLOCK – replace src with your Cloudinary URL */}
-        <motion.section
+
+                  {/* VIDEO */}
+        <motion.div
           initial="hidden"
           animate="visible"
-          variants={fadeUp(0.05)}
-          className="mb-8 rounded-2xl border border-slate-800 bg-slate-950/80 p-4 shadow-lg shadow-slate-950/80"
+          variants={fadeUp(0.1)}
+          className="mb-6 overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 shadow-lg shadow-slate-950/80"
         >
-          <h2 className="mb-2 text-sm font-semibold text-[#ff5b5b]">
-            Visual overview of Solaris run levels
-          </h2>
-          <p className="text-xs text-slate-300">
-            Replace the image URL below with your Cloudinary link to show a
-            diagram of run levels (0, S, 1, 2, 3, 4, 5, 6) and transitions.
-          </p>
-          <div className="mt-3 overflow-hidden rounded-xl border border-slate-800 bg-slate-900/80">
-            <img
-              src="https://res.cloudinary.com/your-account/image/upload/v1234567890/solaris-runlevels.png"
-              alt="Solaris run level diagram"
-              className="h-full w-full object-contain"
-            />
-          </div>
-          <p className="mt-2 text-[11px] text-slate-400">
-            Just replace the <code>src</code> value with your own Cloudinary URL.
-          </p>
-        </motion.section>
+          {lesson.videoUrl ? (
+            <div className="aspect-video w-full">
+              <iframe
+                src={lesson.videoUrl}
+                title={lesson.title || "Installation and Setup"}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="h-full w-full"
+              />
+            </div>
+          ) : (
+            <div className="flex aspect-video w-full items-center justify-center text-xs text-slate-400">
+              Add the YouTube embed URL for this lesson in{" "}
+              <code className="mx-1 rounded bg-slate-900 px-1">
+                components/solaris/solarisLessons.js
+              </code>
+              .
+            </div>
+          )}
+        </motion.div>
 
+        
         {/* MAIN CONTENT */}
         <motion.div
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.1)}
-          className="space-y-10 text-sm leading-relaxed text-slate-200"
+          className="space-y-10 text-sm leading-relaxed dark:text-slate-200"
         >
+
+
           {/* WHAT / WHY */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               What are run levels in Solaris?
             </h2>
-            <p>
+            <p className="text-slate-800 dark:text-slate-200">
               Traditional UNIX and Solaris use{" "}
               <span className="font-semibold">run levels</span> to define system
               state. Each run level represents a specific combination of
@@ -227,9 +233,31 @@ export default function RunLevelsPage() {
             </div>
           </section>
 
+          <section className="space-y-3">
+<h2 className="mb-2 text-sm font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
+             Visual overview of Solaris run levels
+          </h2>
+          <p className="text-xs dark:text-slate-300">
+            Replace the image URL below with your Cloudinary link to show a
+            diagram of run levels (0, S, 1, 2, 3, 4, 5, 6) and transitions.
+          </p>
+
+{/* Images */}
+          <div className="mt-3 gap-y-3">
+            {/* EXAMPLE: replace src with your Cloudinary URLs */}
+            <div className="overflow-hidden rounded-xl border border-slate-800 bg-slate-900/80">
+              <img
+                src="https://res.cloudinary.com/dyjpzvstq/image/upload/v1709985632/sakaqavccz3uv2dkld9z"
+                alt="My Oracle Support - search SRU"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+          </section>
+
           {/* TABLE / SUMMARY OF RUN LEVELS */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Summary of Solaris run levels (0, s/S, 1, 2, 3, 4, 5, 6)
             </h2>
             <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
@@ -241,7 +269,7 @@ export default function RunLevelsPage() {
                   <p className="text-[11px] font-semibold text-slate-400">
                     Run Level
                   </p>
-                  <p className="text-lg font-bold text-[#ff5b5b]">
+                  <p className="text-lg font-bold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
                     {item.level}
                   </p>
                   <p className="mt-1 text-[11px] font-semibold text-slate-100">
@@ -266,7 +294,7 @@ export default function RunLevelsPage() {
 
           {/* DIFFERENCE: S, s, 1, 2, 3, 4, 5, 6 */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Detailed differences – 0, s/S, 1, 2, 3, 4, 5, 6
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
@@ -301,10 +329,10 @@ export default function RunLevelsPage() {
 
           {/* TERMINAL EXAMPLES */}
           <section className="space-y-6">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Run level commands & examples
             </h2>
-            <p>
+            <p className="text-slate-800 dark:text-slate-200">
               In modern Solaris, you usually use <code>shutdown</code> to move
               between run levels cleanly, and <code>who -r</code> to check
               current run level. <code>init</code> calls are still supported and
@@ -312,11 +340,11 @@ export default function RunLevelsPage() {
             </p>
 
             {runlevelSnippets.map((s, index) => (
-              <div key={s.id} className="space-y-2">
-                <h3 className="text-sm font-semibold text-slate-100">
+              <div key={s.id} className="space-y-2 text-slate-800">
+                <h3 className="text-sm font-semibold dark:text-slate-100">
                   {index + 1}. {s.title}
                 </h3>
-                <p className="text-xs text-slate-300">{s.description}</p>
+                <p className="text-xs dark:text-slate-300">{s.description}</p>
                 <TerminalOutput
                   content={s.content}
                   title="terminal — run levels"
@@ -328,8 +356,8 @@ export default function RunLevelsPage() {
           </section>
 
           {/* SMF / MILESTONES NOTE */}
-          <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+          <section className="space-y-3 text-slate-800 dark:text-slate-200">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Run levels vs SMF milestones in Solaris 10/11
             </h2>
             <p>
@@ -348,7 +376,7 @@ export default function RunLevelsPage() {
                 "Run level S → milestone single-user",
               ]}
             />
-            <p className="text-xs text-slate-300">
+            <p className="text-xs dark:text-slate-300">
               You can inspect SMF milestones and services with:
             </p>
             <TerminalOutput
@@ -361,11 +389,11 @@ export default function RunLevelsPage() {
 
           {/* SAFETY / BEST PRACTICES */}
           <section className="space-y-3 rounded-2xl border border-red-500/60 bg-red-500/10 p-4 shadow-lg shadow-red-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-300">
+            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-600">
               <FiAlertTriangle className="text-base" />
               Safety tips when changing run levels
             </h2>
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-red-200">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-slate-800 dark:text-red-200">
               <li>
                 For production systems, always use{" "}
                 <code>shutdown -iX -gN -y</code> instead of direct{" "}
@@ -385,7 +413,7 @@ export default function RunLevelsPage() {
                 lesson.
               </li>
             </ul>
-            <p className="mt-2 flex items-center gap-1 text-[12px] text-red-200">
+            <p className="mt-2 flex items-center gap-1 text-[12px] text-red-600">
               Once you understand run levels clearly, boot troubleshooting and
               maintenance activities become much easier.
               <FiArrowRight className="text-xs" />

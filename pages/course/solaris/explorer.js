@@ -149,11 +149,11 @@ export default function ExplorerPage() {
             Solaris · Support Tools
           </p>
 
-          <h1 className="mt-1 text-3xl font-semibold text-[#ff5b5b]">
+          <h1 className="mt-1 text-3xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
             {lesson.title || "Oracle Explorer (explorer) in Solaris"}
           </h1>
 
-          <p className="mt-1 max-w-3xl text-sm text-slate-300">
+          <p className="mt-1 max-w-3xl text-sm dark:text-slate-300">
             <code>explorer</code> is Oracle&apos;s data collection tool for
             Solaris systems. It collects detailed information about hardware,
             OS, storage, network and configuration. Oracle Support often asks
@@ -194,11 +194,11 @@ export default function ExplorerPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.1)}
-          className="space-y-10 text-sm leading-relaxed text-slate-200"
+          className="space-y-10 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* WHAT / WHY / HOW */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               What is Oracle Explorer? Why is it used?
             </h2>
 
@@ -233,7 +233,7 @@ export default function ExplorerPage() {
 
           {/* FIRST-TIME vs REGULAR USAGE */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               First time vs regular runs – explorer -k vs explorer
             </h2>
 
@@ -260,16 +260,16 @@ export default function ExplorerPage() {
 
           {/* TERMINAL EXAMPLES */}
           <section className="space-y-6">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Step-by-step: collecting explorer logs
             </h2>
 
             {explorerSnippets.map((snip, index) => (
               <div key={snip.id} className="space-y-1">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold dark:text-slate-100">
                   {index + 1}. {snip.title}
                 </h3>
-                <p className="text-xs text-slate-400">{snip.description}</p>
+                <p className="text-xs dark:text-slate-400">{snip.description}</p>
                 <TerminalOutput
                   content={snip.content}
                   title="terminal — explorer"
@@ -282,7 +282,7 @@ export default function ExplorerPage() {
 
           {/* WHAT EXPLORER COLLECTS */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               What does explorer actually collect?
             </h2>
 
@@ -310,12 +310,12 @@ export default function ExplorerPage() {
 
           {/* BEST PRACTICES / SAFETY */}
           <section className="space-y-3 rounded-2xl border border-red-500/60 bg-red-500/10 p-4 shadow-lg shadow-red-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-300">
+            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-600">
               <FiAlertTriangle className="text-base" />
               Best practices when running explorer
             </h2>
 
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-red-100">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-red-100">
               <li>
                 Always run explorer as <code>root</code> on the Solaris host
                 (needs full system access).
@@ -338,7 +338,7 @@ export default function ExplorerPage() {
               </li>
             </ul>
 
-            <p className="mt-2 text-[12px] text-red-200 flex items-center gap-1">
+            <p className="mt-2 text-[12px] text-red-600 flex items-center gap-1">
               A clean explorer bundle attached to your SR is one of the fastest
               ways to get meaningful feedback from Oracle Support.
               <FiServer className="text-xs" />

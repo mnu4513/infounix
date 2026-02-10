@@ -151,11 +151,11 @@ export default function UserManagementPage() {
           <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
             Solaris · Lesson 4
           </p>
-          <h1 className="mt-1 text-2xl font-semibold text-[#ff5b5b] md:text-3xl">
+          <h1 className="mt-1 text-2xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent md:text-3xl">
             {lesson.title || "User Management in Solaris"}
           </h1>
           {lesson.short && (
-            <p className="mt-1 max-w-2xl text-sm text-slate-300">
+            <p className="mt-1 max-w-2xl text-sm dark:text-slate-300">
               {lesson.short}
             </p>
           )}
@@ -195,11 +195,11 @@ export default function UserManagementPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.15)}
-          className="space-y-8 text-sm leading-relaxed text-slate-200"
+          className="space-y-8 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* Overview */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Goal of this lesson
             </h2>
             <p>
@@ -219,7 +219,7 @@ export default function UserManagementPage() {
 
           {/* Concept cards */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Core user-management concepts
             </h2>
             <div className="grid gap-4 md:grid-cols-3">
@@ -243,7 +243,7 @@ export default function UserManagementPage() {
 
           {/* Terminals for each step */}
           <section className="space-y-5">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Step-by-step user-management commands
             </h2>
             <p>
@@ -254,10 +254,10 @@ export default function UserManagementPage() {
 
             {userMgmtSnippets.map((snippet, index) => (
               <div key={snippet.id} className="space-y-2">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold dark:text-slate-100">
                   {index + 1}. {snippet.title}
                 </h3>
-                <p className="text-xs text-slate-300">
+                <p className="text-xs dark:text-slate-300">
                   {snippet.description}
                 </p>
                 <TerminalOutput
@@ -272,7 +272,7 @@ export default function UserManagementPage() {
 
           {/* Best practices */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Good practices when managing users
             </h2>
             <div className="grid gap-3 md:grid-cols-2">
@@ -297,10 +297,10 @@ export default function UserManagementPage() {
 
           {/* Practice box */}
           <section className="space-y-3 rounded-2xl border border-emerald-500/50 bg-emerald-500/10 p-4 shadow-lg shadow-emerald-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-emerald-200">
+            <h2 className="flex items-center gap-2 text-sm font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Practice task – build your own small user set
             </h2>
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-emerald-50">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-emerald-50">
               <li>Create two new users: <code>devuser</code> and <code>opsuser</code>.</li>
               <li>
                 Assign them to appropriate groups and create home directories in{" "}
@@ -315,7 +315,7 @@ export default function UserManagementPage() {
                 lifecycle.
               </li>
             </ul>
-            <p className="mt-2 flex items-center gap-1 text-[12px] text-emerald-200">
+            <p className="mt-2 flex items-center gap-1 text-[12px] text-emerald-600">
               In the next lesson, we will extend this with group-management so
               that you can manage access for teams instead of individual users.
               <FiArrowRight className="text-xs" />

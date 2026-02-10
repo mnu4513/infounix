@@ -174,11 +174,11 @@ export default function ViEditorPage() {
           <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
             Solaris · Lesson 7
           </p>
-          <h1 className="mt-1 text-2xl font-semibold text-[#ff5b5b] md:text-3xl">
+          <h1 className="mt-1 text-2xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent md:text-3xl">
             {lesson.title || "VI Editor in Solaris"}
           </h1>
           {lesson.short && (
-            <p className="mt-1 max-w-2xl text-sm text-slate-300">
+            <p className="mt-1 max-w-2xl text-sm dark:text-slate-300">
               {lesson.short}
             </p>
           )}
@@ -218,11 +218,11 @@ export default function ViEditorPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.15)}
-          className="space-y-8 text-sm leading-relaxed text-slate-200"
+          className="space-y-8 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* Overview */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Why vi is still important
             </h2>
             <p>
@@ -243,7 +243,7 @@ export default function ViEditorPage() {
 
           {/* Concept cards */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Key vi concepts to remember
             </h2>
             <div className="grid gap-4 md:grid-cols-3">
@@ -267,7 +267,7 @@ export default function ViEditorPage() {
 
           {/* Terminals per workflow */}
           <section className="space-y-5">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Essential vi workflows in practice
             </h2>
             <p>
@@ -278,10 +278,10 @@ export default function ViEditorPage() {
 
             {viSnippets.map((snippet, index) => (
               <div key={snippet.id} className="space-y-2">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold dark:text-slate-100">
                   {index + 1}. {snippet.title}
                 </h3>
-                <p className="text-xs text-slate-300">
+                <p className="text-xs dark:text-slate-300">
                   {snippet.description}
                 </p>
                 <TerminalOutput
@@ -296,7 +296,7 @@ export default function ViEditorPage() {
 
           {/* Cheat sheet / summary */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Small vi cheat sheet for administrators
             </h2>
             <div className="grid gap-3 md:grid-cols-2">
@@ -331,11 +331,11 @@ export default function ViEditorPage() {
 
           {/* Safety box */}
           <section className="space-y-3 rounded-2xl border border-amber-500/60 bg-amber-500/10 p-4 shadow-lg shadow-amber-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-amber-200">
+            <h2 className="flex items-center gap-2 text-sm font-semibold text-amber-600">
               <FiAlertTriangle className="text-base" />
               Safety tips when editing system files
             </h2>
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-amber-50">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-amber-50">
               <li>
                 Always take a quick backup of important files before editing,
                 for example:{" "}
@@ -350,7 +350,7 @@ export default function ViEditorPage() {
                 exit without saving and start again.
               </li>
             </ul>
-            <p className="mt-2 flex items-center gap-1 text-[12px] text-amber-200">
+            <p className="mt-2 flex items-center gap-1 text-[12px] text-amber-500">
               Once you are comfortable with vi, editing ZFS, SMF and network
               configuration files becomes much easier.
               <FiArrowRight className="text-xs" />

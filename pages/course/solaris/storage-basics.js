@@ -167,11 +167,11 @@ export default function StorageBasicsPage() {
           <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
             Solaris · Lesson 16
           </p>
-          <h1 className="mt-1 text-2xl font-semibold text-[#ff5b5b] md:text-3xl">
+          <h1 className="mt-1 text-2xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent md:text-3xl">
             {lesson.title || "Storage Basics in Solaris"}
           </h1>
           {lesson.short && (
-            <p className="mt-1 max-w-2xl text-sm text-slate-300">
+            <p className="mt-1 max-w-2xl text-sm dark:text-slate-300">
               {lesson.short}
             </p>
           )}
@@ -211,11 +211,11 @@ export default function StorageBasicsPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.15)}
-          className="space-y-8 text-sm leading-relaxed text-slate-200"
+          className="space-y-8 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* Overview */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Why storage basics matter before ZFS
             </h2>
             <p>
@@ -236,7 +236,7 @@ export default function StorageBasicsPage() {
 
           {/* Concept cards */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Core storage concepts in Solaris
             </h2>
             <div className="grid gap-4 md:grid-cols-3">
@@ -260,7 +260,7 @@ export default function StorageBasicsPage() {
 
           {/* Terminals */}
           <section className="space-y-5">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Step-by-step storage discovery commands
             </h2>
             <p>
@@ -271,10 +271,10 @@ export default function StorageBasicsPage() {
 
             {storageSnippets.map((snippet, index) => (
               <div key={snippet.id} className="space-y-2">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold dark:text-slate-100">
                   {index + 1}. {snippet.title}
                 </h3>
-                <p className="text-xs text-slate-300">
+                <p className="text-xs dark:text-slate-300">
                   {snippet.description}
                 </p>
                 <TerminalOutput
@@ -289,7 +289,7 @@ export default function StorageBasicsPage() {
 
           {/* Summary / cheat sheet */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Small cheat sheet – storage discovery
             </h2>
             <div className="grid gap-3 md:grid-cols-2">
@@ -317,11 +317,11 @@ export default function StorageBasicsPage() {
 
           {/* Safety box */}
           <section className="space-y-3 rounded-2xl border border-amber-500/60 bg-amber-500/10 p-4 shadow-lg shadow-amber-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-amber-200">
+            <h2 className="flex items-center gap-2 text-sm font-semibold text-amber-600">
               <FiAlertTriangle className="text-base" />
               Storage safety tips before ZFS work
             </h2>
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-amber-50">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-amber-50">
               <li>
                 Never run <code>format</code> → <code>label</code> or{" "}
                 <code>zpool create</code> on a disk unless you are 100% sure it
@@ -336,7 +336,7 @@ export default function StorageBasicsPage() {
                 <code>zpool status</code> for documentation and recovery.
               </li>
             </ul>
-            <p className="mt-2 flex items-center gap-1 text-[12px] text-amber-200">
+            <p className="mt-2 flex items-center gap-1 text-[12px] text-amber-600">
               In the next lessons, we will build on this foundation to create
               zpools and ZFS filesystems confidently.
               <FiArrowRight className="text-xs" />

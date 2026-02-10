@@ -268,11 +268,11 @@ export default function ZpoolPage() {
           <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
             Solaris · Lesson 17
           </p>
-          <h1 className="mt-1 text-3xl font-semibold text-[#ff5b5b]">
+          <h1 className="mt-1 text-3xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
             {lesson.title || "ZPOOL – Storage Pool Management"}
           </h1>
           {lesson.short && (
-            <p className="mt-1 max-w-2xl text-sm text-slate-300">{lesson.short}</p>
+            <p className="mt-1 max-w-2xl text-sm dark:text-slate-300">{lesson.short}</p>
           )}
 
           <div className="mt-3 h-px w-full bg-gradient-to-r from-[#ff5b5b] via-slate-700 to-transparent" />
@@ -307,11 +307,11 @@ export default function ZpoolPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.1)}
-          className="space-y-10 text-sm leading-relaxed text-slate-200"
+          className="space-y-10 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* INTRO THEORY */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               ZPOOL Overview — the foundation of ZFS
             </h2>
             <p>
@@ -345,16 +345,16 @@ export default function ZpoolPage() {
 
           {/* TERMINAL SECTION */}
           <section className="space-y-5">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Step-by-step ZPOOL commands with examples
             </h2>
 
             {zpoolSnippets.map((s, i) => (
               <div key={s.id} className="space-y-2">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold dark:text-slate-100">
                   {i + 1}. {s.title}
                 </h3>
-                <p className="text-xs text-slate-300">{s.description}</p>
+                <p className="text-xs dark:text-slate-300">{s.description}</p>
                 <TerminalOutput
                   content={s.content}
                   title="terminal — zpool"
@@ -367,7 +367,7 @@ export default function ZpoolPage() {
 
           {/* CHEAT SHEET */}
           <section>
-            <h2 className="text-base font-semibold text-[#ff5b5b] mb-3">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent mb-3">
               Quick ZPOOL Admin Cheat Sheet
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
@@ -400,10 +400,10 @@ export default function ZpoolPage() {
 
           {/* SAFETY BOX */}
           <section className="rounded-2xl border border-red-500/50 bg-red-500/10 p-4 shadow-lg shadow-red-900/40 space-y-3">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-300">
+            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-600">
               <FiAlertTriangle /> Critical Safety Notes
             </h2>
-            <ul className="list-disc pl-5 text-[13px] text-red-200 space-y-1">
+            <ul className="list-disc pl-5 text-[13px] dark:text-red-200 space-y-1">
               <li>
                 <strong>zpool destroy</strong> will wipe all data instantly —
                 use only in labs.
@@ -420,7 +420,7 @@ export default function ZpoolPage() {
                 Use <code>zpool scrub</code> regularly to detect silent corruption.
               </li>
             </ul>
-            <p className="flex items-center gap-1 text-red-200 text-xs mt-1">
+            <p className="flex items-center gap-1 text-red-600 text-xs mt-1">
               Next chapter: ZFS datasets, filesystems, quotas, mountpoints and
               snapshots.
               <FiArrowRight />

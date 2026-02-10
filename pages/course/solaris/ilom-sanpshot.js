@@ -117,11 +117,11 @@ export default function IlomSnapshotPage() {
             Solaris · ILOM Tools
           </p>
 
-          <h1 className="mt-1 text-3xl font-semibold text-[#ff5b5b]">
+          <h1 className="mt-1 text-3xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
             {lesson.title || "ILOM Snapshot – Collection & Usage"}
           </h1>
 
-          <p className="mt-1 max-w-3xl text-sm text-slate-300">
+          <p className="mt-1 max-w-3xl text-sm dark:text-slate-300">
             ILOM snapshot is a support bundle that collects logs, configuration,
             inventory and diagnostic data from the Integrated Lights Out Manager
             (ILOM). Oracle Support often asks for this snapshot when you open a
@@ -161,11 +161,11 @@ export default function IlomSnapshotPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.1)}
-          className="space-y-10 text-sm leading-relaxed text-slate-200"
+          className="space-y-10 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* WHAT / WHY SECTION */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               What is an ILOM snapshot and why use it?
             </h2>
 
@@ -201,7 +201,7 @@ export default function IlomSnapshotPage() {
 
           {/* IMAGE PLACE 1 – LOGIN & NAVIGATION */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Step 1 – Login to ILOM web interface
             </h2>
             <p>
@@ -210,7 +210,7 @@ export default function IlomSnapshotPage() {
               account, not root of the OS).
             </p>
 
-            <ul className="list-disc pl-5 text-xs text-slate-300 space-y-1">
+            <ul className="list-disc pl-5 text-xs dark:text-slate-300 space-y-1">
               <li>URL typically looks like: https://&lt;ilom-ip&gt;/</li>
               <li>Use the username/password you use for service processor.</li>
               <li>
@@ -223,21 +223,17 @@ export default function IlomSnapshotPage() {
             <div className="mt-3 overflow-hidden rounded-xl border border-slate-800 bg-slate-900/80">
               {/* Replace src with your Cloudinary URL */}
               <img
-                src="https://res.cloudinary.com/YOUR_ACCOUNT/image/upload/v1234567890/ilom-login.png"
+                src="https://res.cloudinary.com/dyjpzvstq/image/upload/v1709985632/r7m47oxvlcal0vgcj1fn"
                 alt="ILOM login screen"
                 className="h-full w-full object-contain"
               />
             </div>
 
-            <p className="mt-1 text-[11px] text-slate-400">
-              Image slot 1 – login page screenshot. Replace the{" "}
-              <code>src</code> value with your Cloudinary link.
-            </p>
           </section>
 
           {/* IMAGE PLACE 2 – NAVIGATE TO SNAPSHOT PAGE */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Step 2 – Navigate to ILOM Snapshot section
             </h2>
 
@@ -261,20 +257,17 @@ export default function IlomSnapshotPage() {
             <div className="mt-3 overflow-hidden rounded-xl border border-slate-800 bg-slate-900/80">
               {/* Replace src with your Cloudinary URL */}
               <img
-                src="https://res.cloudinary.com/YOUR_ACCOUNT/image/upload/v1234567890/ilom-snapshot-menu.png"
+                src="https://res.cloudinary.com/dyjpzvstq/image/upload/v1709985632/sxfq3qpkijuv94siqwxi"
                 alt="ILOM snapshot menu"
                 className="h-full w-full object-contain"
               />
             </div>
 
-            <p className="mt-1 text-[11px] text-slate-400">
-              Image slot 2 – snapshot menu / navigation screenshot.
-            </p>
           </section>
 
           {/* IMAGE PLACE 3 – GENERATE & DOWNLOAD SNAPSHOT */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Step 3 – Generate and download the snapshot (GUI)
             </h2>
 
@@ -282,7 +275,7 @@ export default function IlomSnapshotPage() {
               On the snapshot page, you&apos;ll typically choose:
             </p>
 
-            <ul className="list-disc pl-5 text-xs text-slate-300 space-y-1">
+            <ul className="list-disc pl-5 text-xs dark:text-slate-300 space-y-1">
               <li>Type of snapshot (full / normal / minimal – depends on ILOM).</li>
               <li>Target location (download to browser or remote share).</li>
               <li>Optionally include debug/extended logs if requested by Oracle.</li>
@@ -302,20 +295,17 @@ export default function IlomSnapshotPage() {
             <div className="mt-3 overflow-hidden rounded-xl border border-slate-800 bg-slate-900/80">
               {/* Replace src with your Cloudinary URL */}
               <img
-                src="https://res.cloudinary.com/YOUR_ACCOUNT/image/upload/v1234567890/ilom-snapshot-download.png"
+                src="https://res.cloudinary.com/dyjpzvstq/image/upload/v1709985632/sxfq3qpkijuv94siqwxi"
                 alt="ILOM snapshot download"
                 className="h-full w-full object-contain"
               />
             </div>
 
-            <p className="mt-1 text-[11px] text-slate-400">
-              Image slot 3 – snapshot generation/download screen.
-            </p>
           </section>
 
           {/* CLI SECTION */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Generating ILOM snapshot from CLI
             </h2>
 
@@ -327,10 +317,10 @@ export default function IlomSnapshotPage() {
 
             {ilomCliSnippets.map((snippet, index) => (
               <div key={snippet.id} className="space-y-1">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold dark:text-slate-100">
                   {index + 1}. {snippet.title}
                 </h3>
-                <p className="text-xs text-slate-400">{snippet.description}</p>
+                <p className="text-xs dark:text-slate-400">{snippet.description}</p>
                 <TerminalOutput
                   content={snippet.content}
                   title="terminal — ilom snapshot"
@@ -340,7 +330,7 @@ export default function IlomSnapshotPage() {
               </div>
             ))}
 
-            <p className="text-[11px] text-slate-400">
+            <p className="text-[11px] dark:text-slate-400">
               Exact property names and supported URI schemas may vary by ILOM
               version / platform. Always check <code>show</code> output and
               Oracle documentation for your specific hardware.
@@ -349,12 +339,12 @@ export default function IlomSnapshotPage() {
 
           {/* SECURITY / BEST PRACTICES */}
           <section className="space-y-3 rounded-2xl border border-red-500/60 bg-red-500/10 p-4 shadow-lg shadow-red-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-300">
+            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-600">
               <FiShield className="text-base" />
               Security & Best Practices for ILOM Snapshots
             </h2>
 
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-red-100">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-red-100">
               <li>
                 ILOM snapshots may contain hostnames, IPs, serial numbers and
                 diagnostic data – treat them as sensitive.
@@ -373,7 +363,7 @@ export default function IlomSnapshotPage() {
               </li>
             </ul>
 
-            <p className="mt-2 text-[12px] text-red-200 flex items-center gap-1">
+            <p className="mt-2 text-[12px] text-red-600 flex items-center gap-1">
               ILOM snapshot is often the first thing Oracle asks for – if you
               can collect it quickly and correctly, SR resolution becomes much
               faster.

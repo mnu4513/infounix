@@ -93,10 +93,10 @@ export default function LdomsDynamicResourcesPage() {
           <p className="text-xs tracking-[0.3em] text-slate-400">
             Solaris SPARC · LDOMs · DRS
           </p>
-          <h1 className="mt-1 text-3xl font-semibold text-[#ff5b5b]">
+          <h1 className="mt-1 text-3xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
             Dynamic CPU, Memory & I/O Management
           </h1>
-          <p className="mt-2 max-w-3xl text-sm text-slate-300">
+          <p className="mt-2 max-w-3xl text-sm dark:text-slate-300">
             One of the strengths of LDOMs is the ability to adjust resources
             while domains are running. You can add or remove vCPUs, memory and
             virtual disks without always requiring downtime – depending on OS
@@ -105,16 +105,46 @@ export default function LdomsDynamicResourcesPage() {
           <div className="mt-3 h-px bg-gradient-to-r from-[#ff5b5b] via-slate-700 to-transparent" />
         </motion.header>
 
+
+                  {/* VIDEO */}
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp(0.1)}
+          className="mb-6 overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 shadow-lg shadow-slate-950/80"
+        >
+          {lesson.videoUrl ? (
+            <div className="aspect-video w-full">
+              <iframe
+                src={lesson.videoUrl}
+                title={lesson.title || "Installation and Setup"}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="h-full w-full"
+              />
+            </div>
+          ) : (
+            <div className="flex aspect-video w-full items-center justify-center text-xs text-slate-400">
+              Add the YouTube embed URL for this lesson in{" "}
+              <code className="mx-1 rounded bg-slate-900 px-1">
+                components/solaris/solarisLessons.js
+              </code>
+              .
+            </div>
+          )}
+        </motion.div>
+
+        
         {/* MAIN CONTENT */}
         <motion.div
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.1)}
-          className="space-y-10 text-sm leading-relaxed text-slate-200"
+          className="space-y-10 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* OVERVIEW */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               What is dynamic resource management?
             </h2>
             <div className="grid gap-4 md:grid-cols-3">
@@ -147,16 +177,16 @@ export default function LdomsDynamicResourcesPage() {
 
           {/* COMMANDS */}
           <section className="space-y-6">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Commands and examples
             </h2>
 
             {dynSnips.map((s, i) => (
               <div key={i} className="space-y-1">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold dark:text-slate-100">
                   {i + 1}. {s.title}
                 </h3>
-                <p className="text-xs text-slate-400">{s.desc}</p>
+                <p className="text-xs dark:text-slate-400">{s.desc}</p>
                 <TerminalOutput
                   content={s.content}
                   title="terminal — dynamic resources"
@@ -169,11 +199,11 @@ export default function LdomsDynamicResourcesPage() {
 
           {/* WARNING BOX */}
           <section className="space-y-3 rounded-2xl border border-red-500/60 bg-red-500/10 p-4 shadow-lg shadow-red-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-200">
+            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-600">
               <FiAlertTriangle className="text-base" />
               Caution for production environments
             </h2>
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-red-100">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-red-100">
               <li>
                 Coordinate CPU/memory changes with application teams – some apps
                 read resources only at startup.

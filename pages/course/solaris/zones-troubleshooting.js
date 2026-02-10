@@ -197,11 +197,11 @@ export default function ZonesTroubleshootingPage() {
             Solaris · Zones · Troubleshooting
           </p>
 
-          <h1 className="mt-1 text-3xl font-semibold text-[#ff5b5b]">
+          <h1 className="mt-1 text-3xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
             {lesson.title || "Zones Troubleshooting in Solaris"}
           </h1>
 
-          <p className="mt-1 max-w-3xl text-sm text-slate-300">
+          <p className="mt-1 max-w-3xl text-sm dark:text-slate-300">
             Zones are powerful, but when something goes wrong you need a
             standard approach: check state, verify configuration, look at logs,
             fix resources and try again. This lesson covers typical zone and
@@ -241,11 +241,11 @@ export default function ZonesTroubleshootingPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.1)}
-          className="space-y-10 text-sm leading-relaxed text-slate-200"
+          className="space-y-10 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* HIGH LEVEL APPROACH */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Troubleshooting approach – zones and kernel zones
             </h2>
 
@@ -281,16 +281,16 @@ export default function ZonesTroubleshootingPage() {
 
           {/* TERMINAL EXAMPLES / SCENARIOS */}
           <section className="space-y-6">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Typical issues & how to fix them
             </h2>
 
             {zoneTroubleSnips.map((snippet, index) => (
               <div key={snippet.id} className="space-y-1">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold dark:text-slate-100">
                   {index + 1}. {snippet.title}
                 </h3>
-                <p className="text-xs text-slate-400">
+                <p className="text-xs dark:text-slate-400">
                   {snippet.description}
                 </p>
                 <TerminalOutput
@@ -305,12 +305,12 @@ export default function ZonesTroubleshootingPage() {
 
           {/* CHECKLIST / SUMMARY */}
           <section className="space-y-3 rounded-2xl border border-red-500/60 bg-red-500/10 p-4 shadow-lg shadow-red-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-300">
+            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-600">
               <FiAlertTriangle className="text-base" />
               Troubleshooting checklist – zones & kernel zones
             </h2>
 
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-red-100">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-red-100">
               <li>Always start with <code>zoneadm list -cv</code>.</li>
               <li>
                 If config-related: <code>zonecfg -z &lt;zone&gt; verify</code>.
@@ -329,7 +329,7 @@ export default function ZonesTroubleshootingPage() {
               </li>
             </ul>
 
-            <p className="mt-2 text-[12px] text-red-200 flex items-center gap-1">
+            <p className="mt-2 text-[12px] text-red-600 flex items-center gap-1">
               With a consistent checklist, even complex zone and kernel zone
               issues become manageable instead of scary.
               <FiActivity className="text-xs" />

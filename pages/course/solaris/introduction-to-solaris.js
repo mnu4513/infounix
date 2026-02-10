@@ -54,11 +54,11 @@ export default function IntroductionToSolarisPage() {
           <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
             Solaris · Lesson 1
           </p>
-          <h1 className="mt-1 text-2xl font-semibold text-[#ff5b5b] md:text-3xl">
+          <h1 className="mt-1 text-2xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent md:text-3xl">
             {lesson.title || "Introduction to Solaris"}
           </h1>
           {lesson.short && (
-            <p className="mt-1 max-w-2xl text-sm text-slate-300">
+            <p className="mt-1 max-w-2xl text-sm dark:text-slate-300">
               {lesson.short}
             </p>
           )}
@@ -98,11 +98,11 @@ export default function IntroductionToSolarisPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.15)}
-          className="space-y-8 text-sm leading-relaxed text-slate-200"
+          className="space-y-8 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* What is Solaris */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               What is Solaris?
             </h2>
             <p>
@@ -124,7 +124,7 @@ export default function IntroductionToSolarisPage() {
 
           {/* Key features cards */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold  bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Why do companies still use Solaris?
             </h2>
             <p>
@@ -162,7 +162,7 @@ export default function IntroductionToSolarisPage() {
 
           {/* Where do you see Solaris */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold  bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Where will *you* see Solaris as an admin?
             </h2>
             <p>
@@ -206,7 +206,7 @@ export default function IntroductionToSolarisPage() {
 
           {/* Solaris vs Linux quick comparison */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold  bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Solaris vs Linux – high-level view
             </h2>
             <p>
@@ -263,10 +263,10 @@ export default function IntroductionToSolarisPage() {
 
           {/* What you will know after this course */}
           <section className="space-y-3 rounded-2xl border border-sky-600/50 bg-sky-500/10 p-4 shadow-lg shadow-sky-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-sky-200">
+            <h2 className="flex items-center gap-2 text-sm font-semibold  bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               After this course, you should be able to…
             </h2>
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-sky-50">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-sky-50">
               <li>Log in to Solaris systems confidently and explore them.</li>
               <li>
                 Manage users, groups, services, storage and networking on

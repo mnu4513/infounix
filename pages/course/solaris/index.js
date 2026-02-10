@@ -1,8 +1,21 @@
 import React from "react";
 import Head from "next/head";
 import SolarisLayout from "../../../components/solaris/SolarisLayout";
+import { solarisLessons } from "../../../components/solaris/solarisLessons";
+import { motion } from "framer-motion";
+const fadeUp = (delay = 0) => ({
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { delay, duration: 0.5, ease: "easeOut" },
+  },
+});
 
 export default function SolarisOverviewPage() {
+
+    const lesson =
+      solarisLessons.find((l) => l.slug === "installation-and-setup") || {};
   return (
     <>
       <Head>
@@ -38,7 +51,34 @@ export default function SolarisOverviewPage() {
             </p>
           </section>
 
-          <hr className="border-slate-800" />
+
+                  {/* VIDEO */}
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp(0.1)}
+          className="mb-6 overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 shadow-lg shadow-slate-950/80"
+        >
+          {lesson.videoUrl ? (
+            <div className="aspect-video w-full">
+              <iframe
+                src={lesson.videoUrl}
+                title={lesson.title || "Installation and Setup"}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="h-full w-full"
+              />
+            </div>
+          ) : (
+            <div className="flex aspect-video w-full items-center justify-center text-xs text-slate-400">
+              Add the YouTube embed URL for this lesson in{" "}
+              <code className="mx-1 rounded bg-slate-900 px-1">
+                components/solaris/solarisLessons.js
+              </code>
+              .
+            </div>
+          )}
+        </motion.div>
 
           <section>
             <h2 className="text-lg font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent ">

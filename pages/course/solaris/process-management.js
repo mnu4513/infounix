@@ -151,11 +151,11 @@ export default function ProcessManagementPage() {
           <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
             Solaris · Lesson 10
           </p>
-          <h1 className="mt-1 text-2xl font-semibold text-[#ff5b5b] md:text-3xl">
+          <h1 className="mt-1 text-2xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent md:text-3xl">
             {lesson.title || "Process Management in Solaris"}
           </h1>
           {lesson.short && (
-            <p className="mt-1 max-w-2xl text-sm text-slate-300">
+            <p className="mt-1 max-w-2xl text-sm dark:text-slate-300">
               {lesson.short}
             </p>
           )}
@@ -195,11 +195,11 @@ export default function ProcessManagementPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.15)}
-          className="space-y-8 text-sm leading-relaxed text-slate-200"
+          className="space-y-8 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* Overview */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Why process management is important
             </h2>
             <p>
@@ -221,7 +221,7 @@ export default function ProcessManagementPage() {
 
           {/* Concept cards */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Key concepts in process management
             </h2>
             <div className="grid gap-4 md:grid-cols-3">
@@ -245,7 +245,7 @@ export default function ProcessManagementPage() {
 
           {/* Step-by-step terminals */}
           <section className="space-y-5">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Step-by-step process commands
             </h2>
             <p>
@@ -256,10 +256,10 @@ export default function ProcessManagementPage() {
 
             {processSnippets.map((snippet, index) => (
               <div key={snippet.id} className="space-y-2">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold dark:text-slate-100">
                   {index + 1}. {snippet.title}
                 </h3>
-                <p className="text-xs text-slate-300">
+                <p className="text-xs dark:text-slate-300">
                   {snippet.description}
                 </p>
                 <TerminalOutput
@@ -274,7 +274,7 @@ export default function ProcessManagementPage() {
 
           {/* Best practices */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Good practices for managing processes
             </h2>
             <div className="grid gap-3 md:grid-cols-2">
@@ -299,10 +299,10 @@ export default function ProcessManagementPage() {
 
           {/* Practice box */}
           <section className="space-y-3 rounded-2xl border border-emerald-500/50 bg-emerald-500/10 p-4 shadow-lg shadow-emerald-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-emerald-200">
+            <h2 className="flex items-center gap-2 text-sm font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Practice task – observe and control processes
             </h2>
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-emerald-50">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-emerald-50">
               <li>
                 Open a few terminals and start simple commands (ping, sleep,
                 loops) and watch them using <code>ps -ef</code> and{" "}
@@ -322,7 +322,7 @@ export default function ProcessManagementPage() {
                 process on a real production system.
               </li>
             </ul>
-            <p className="mt-2 flex items-center gap-1 text-[12px] text-emerald-200">
+            <p className="mt-2 flex items-center gap-1 text-[12px] text-emerald-600">
               In the next lessons on service management and monitoring, you will
               see how process-level information combines with SMF and system
               logs for full troubleshooting.

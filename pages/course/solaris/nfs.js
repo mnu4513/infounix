@@ -227,11 +227,11 @@ export default function NFSPage() {
             Solaris · Lesson 22
           </p>
 
-          <h1 className="mt-1 text-3xl font-semibold text-[#ff5b5b]">
+          <h1 className="mt-1 text-3xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
             {lesson.title || "NFS – Network File System in Solaris"}
           </h1>
 
-          <p className="mt-1 max-w-3xl text-sm text-slate-300">
+          <p className="mt-1 max-w-3xl text-sm dark:text-slate-300">
             NFS lets you share files and directories over the network so that
             remote systems can access them as if they were local. In Solaris,
             NFS is tightly integrated with SMF and IPS, making it easy to set up
@@ -271,11 +271,11 @@ export default function NFSPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.1)}
-          className="space-y-10 text-sm leading-relaxed text-slate-200"
+          className="space-y-10 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* OVERVIEW / THEORY */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               NFS overview – server, client and exports
             </h2>
             <p>
@@ -308,7 +308,7 @@ export default function NFSPage() {
 
           {/* PERMISSIONS / CLIENT-SPECIFIC EXPLANATION */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Sharing to specific clients with custom permissions
             </h2>
             <p>
@@ -340,7 +340,7 @@ export default function NFSPage() {
 
           {/* TERMINAL EXAMPLES */}
           <section className="space-y-6">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Step-by-step: NFS server and client in Solaris
             </h2>
             <p>
@@ -351,10 +351,10 @@ export default function NFSPage() {
 
             {nfsSnippets.map((snippet, index) => (
               <div key={snippet.id} className="space-y-2">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold dark:text-slate-100">
                   {index + 1}. {snippet.title}
                 </h3>
-                <p className="text-xs text-slate-300">
+                <p className="text-xs dark:text-slate-300">
                   {snippet.description}
                 </p>
                 <TerminalOutput
@@ -369,7 +369,7 @@ export default function NFSPage() {
 
           {/* SUMMARY / CHEAT SHEET */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Quick NFS cheat sheet (Solaris)
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
@@ -398,11 +398,11 @@ export default function NFSPage() {
 
           {/* SAFETY / BEST PRACTICES */}
           <section className="space-y-3 rounded-2xl border border-amber-500/60 bg-amber-500/10 p-4 shadow-lg shadow-amber-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-amber-200">
+            <h2 className="flex items-center gap-2 text-sm font-semibold text-amber-600">
               <FiShield className="text-base" />
               Security and best practices for NFS
             </h2>
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-amber-50">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-amber-50">
               <li>
                 Avoid using <code>anon=0</code> and wide-open root access in
                 production; prefer mapping anonymous users to non-privileged
@@ -422,7 +422,7 @@ export default function NFSPage() {
                 <code>/var/log/syslog</code> for NFS-related errors regularly.
               </li>
             </ul>
-            <p className="mt-2 flex items-center gap-1 text-[12px] text-amber-200">
+            <p className="mt-2 flex items-center gap-1 text-[12px] text-amber-600">
               NFS is often combined with ZFS and zones – in later lessons, you
               can export ZFS datasets and mount them inside Solaris zones for
               flexible architectures.

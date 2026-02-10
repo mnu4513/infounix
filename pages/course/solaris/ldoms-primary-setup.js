@@ -113,10 +113,10 @@ export default function LdomsPrimarySetupPage() {
           <p className="text-xs tracking-[0.3em] text-slate-400">
             Solaris SPARC · LDOMs · Primary
           </p>
-          <h1 className="mt-1 text-3xl font-semibold text-[#ff5b5b]">
+          <h1 className="mt-1 text-3xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
             Install LDoms Manager & Configure the Primary Domain
           </h1>
-          <p className="mt-2 max-w-3xl text-sm text-slate-300">
+          <p className="mt-2 max-w-3xl text-sm dark:text-slate-300">
             Before you can create guest domains, the primary domain must be
             configured as a control/service domain and LDoms Manager (ldmd)
             needs to be running. In many Oracle SPARC systems this is mostly
@@ -156,11 +156,11 @@ export default function LdomsPrimarySetupPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.1)}
-          className="space-y-10 text-sm leading-relaxed text-slate-200"
+          className="space-y-10 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* OVERVIEW */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Role of the primary / control domain
             </h2>
             <div className="grid gap-4 md:grid-cols-3">
@@ -195,16 +195,16 @@ export default function LdomsPrimarySetupPage() {
 
           {/* TERMINAL STEPS */}
           <section className="space-y-6">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Step-by-step: configure primary/control domain
             </h2>
 
             {primarySnips.map((s, i) => (
               <div key={i} className="space-y-1">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold dark:text-slate-100">
                   {i + 1}. {s.title}
                 </h3>
-                <p className="text-xs text-slate-400">{s.desc}</p>
+                <p className="text-xs dark:text-slate-400">{s.desc}</p>
                 <TerminalOutput
                   content={s.content}
                   title="terminal — primary domain"
@@ -217,7 +217,7 @@ export default function LdomsPrimarySetupPage() {
 
           {/* NEW SECTION: SP CONFIG EXPLANATION */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               SP configuration (spconfig) – what it is and why it matters
             </h2>
 
@@ -260,11 +260,11 @@ export default function LdomsPrimarySetupPage() {
 
           {/* SAFETY */}
           <section className="space-y-3 rounded-2xl border border-red-500/60 bg-red-500/10 p-4 shadow-lg shadow-red-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-200">
+            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-600">
               <FiAlertTriangle className="text-base" />
               Important notes
             </h2>
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-red-100">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-red-100">
               <li>
                 Primary domain is critical: if it is down, you usually cannot
                 manage other domains.

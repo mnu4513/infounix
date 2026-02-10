@@ -141,11 +141,11 @@ export default function BootPhase() {
             Solaris · Boot Mechanics
           </p>
 
-          <h1 className="mt-1 text-3xl font-semibold text-[#ff5b5b]">
+          <h1 className="mt-1 text-3xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
             Solaris Boot Phase – Complete Deep Dive
           </h1>
 
-          <p className="mt-2 max-w-3xl text-sm text-slate-300">
+          <p className="mt-2 max-w-3xl text-sm dark:text-slate-300">
             Solaris booting starts from firmware (SP/BIOS), goes through GRUB
             bootloader, kernel initialization, and ends in SMF milestones.
             Understanding each phase is essential for troubleshooting boot
@@ -155,41 +155,48 @@ export default function BootPhase() {
           <div className="mt-3 h-px bg-gradient-to-r from-[#ff5b5b] via-slate-700 to-transparent" />
         </motion.header>
 
-        {/* IMAGE (optional) */}
-        <motion.section
+                  {/* VIDEO */}
+        <motion.div
           initial="hidden"
           animate="visible"
-          variants={fadeUp(0.05)}
-          className="mb-8 rounded-2xl border border-slate-800 bg-slate-950/80 p-4 shadow-xl"
+          variants={fadeUp(0.1)}
+          className="mb-6 overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 shadow-lg shadow-slate-950/80"
         >
-          <h2 className="text-sm font-semibold text-[#ff5b5b] mb-2">
-            Boot Phase Diagram
-          </h2>
+          {lesson.videoUrl ? (
+            <div className="aspect-video w-full">
+              <iframe
+                src={lesson.videoUrl}
+                title={lesson.title || "Installation and Setup"}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="h-full w-full"
+              />
+            </div>
+          ) : (
+            <div className="flex aspect-video w-full items-center justify-center text-xs text-slate-400">
+              Add the YouTube embed URL for this lesson in{" "}
+              <code className="mx-1 rounded bg-slate-900 px-1">
+                components/solaris/solarisLessons.js
+              </code>
+              .
+            </div>
+          )}
+        </motion.div>
 
-          <img
-            src="https://res.cloudinary.com/replace-with-your-image"
-            alt="Solaris Boot Phase Diagram"
-            className="rounded-xl w-full object-contain border border-slate-800"
-          />
-
-          <p className="text-[11px] text-slate-400 mt-1">
-            Replace the above link with your Cloudinary image URL.
-          </p>
-        </motion.section>
-
+        
         {/* MAIN CONTENT */}
         <motion.div
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.1)}
-          className="space-y-10 text-sm text-slate-200 leading-relaxed"
+          className="space-y-10 text-sm dark:text-slate-200 leading-relaxed"
         >
           {/* STAGES */}
           <section>
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Solaris Boot Phases Explained
             </h2>
-            <p className="mt-2 text-slate-300">
+            <p className="mt-2 dark:text-slate-300">
               From power-on until login prompt, Solaris passes through six
               well-defined phases. Each phase can fail independently and is
               useful for troubleshooting.
@@ -218,16 +225,16 @@ export default function BootPhase() {
 
           {/* TERMINAL SNIPPETS */}
           <section>
-            <h2 className="text-base font-semibold text-[#ff5b5b] mb-4">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent mb-4">
               Important Boot Troubleshooting Commands
             </h2>
 
             {bootSnips.map((snip, index) => (
               <div key={index} className="mb-6">
-                <h3 className="text-sm font-semibold text-slate-200">
+                <h3 className="text-sm font-semibold dark:text-slate-200">
                   {snip.title}
                 </h3>
-                <p className="text-xs text-slate-400 mb-2">{snip.desc}</p>
+                <p className="text-xs dark:text-slate-400 mb-2">{snip.desc}</p>
                 <TerminalOutput
                   content={snip.content}
                   title="boot-phase"
@@ -240,7 +247,7 @@ export default function BootPhase() {
 
           {/* SMF SECTION */}
           <section>
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               How SMF (Service Management Facility) Controls Boot
             </h2>
 
@@ -266,10 +273,10 @@ export default function BootPhase() {
 
           {/* SAFETY SECTION */}
           <section className="rounded-2xl border border-red-500/50 bg-red-500/10 p-4 shadow-lg shadow-red-900/50">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-300">
+            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-600">
               <FiAlertTriangle /> Common Boot Problems
             </h2>
-            <ul className="list-disc text-red-200 text-[13px] pl-5 mt-2 space-y-1">
+            <ul className="list-disc dark:text-red-200 text-[13px] pl-5 mt-2 space-y-1">
               <li>Corrupted boot archive</li>
               <li>SMF service dependency failure</li>
               <li>Failed kernel driver load</li>
@@ -282,7 +289,7 @@ export default function BootPhase() {
 [root@solaris ~]# bootadm update-archive -v`}
             />
 
-            <p className="mt-2 text-[12px] text-red-200 flex items-center gap-1">
+            <p className="mt-2 text-[12px] text-red-600 flex items-center gap-1">
               Knowing these phases makes Solaris boot troubleshooting far easier.
               <FiArrowRight />
             </p>

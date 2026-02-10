@@ -140,11 +140,11 @@ export default function ZFSSnapshotPage() {
             Solaris · Lesson 20
           </p>
 
-          <h1 className="mt-1 text-3xl font-semibold text-[#ff5b5b]">
+          <h1 className="mt-1 text-3xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
             {lesson.title || "ZFS Snapshots"}
           </h1>
 
-          <p className="mt-1 max-w-3xl text-sm text-slate-300">
+          <p className="mt-1 max-w-3xl text-sm dark:text-slate-300">
             Snapshots are one of the most powerful ZFS features. They are
             instant, lightweight and perfect for backups, rollbacks and cloning.
             In this lesson you will learn how snapshots work internally and how
@@ -183,11 +183,11 @@ export default function ZFSSnapshotPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.1)}
-          className="space-y-10 text-sm text-slate-200"
+          className="space-y-10 text-sm dark:text-slate-200"
         >
           {/* THEORY SECTION */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               What is a ZFS Snapshot?
             </h2>
 
@@ -218,7 +218,7 @@ export default function ZFSSnapshotPage() {
 
           {/* WHEN TO USE SNAPSHOTS */}
           <section className="space-y-2">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               When Should You Use ZFS Snapshots?
             </h2>
 
@@ -236,17 +236,17 @@ export default function ZFSSnapshotPage() {
 
           {/* TERMINAL EXAMPLES */}
           <section className="space-y-6">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               ZFS Snapshot Commands with Examples
             </h2>
 
             {snapshotSnippets.map((s, index) => (
               <div key={s.id} className="space-y-1">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold dark:text-slate-100">
                   {index + 1}. {s.title}
                 </h3>
 
-                <p className="text-xs text-slate-400">{s.description}</p>
+                <p className="text-xs dark:text-slate-400">{s.description}</p>
 
                 <TerminalOutput
                   content={s.content}
@@ -260,7 +260,7 @@ export default function ZFSSnapshotPage() {
 
           {/* CHEAT SHEET */}
           <section>
-            <h2 className="text-base font-semibold text-[#ff5b5b] mb-3">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent mb-3">
               Snapshot Command Cheat Sheet
             </h2>
 
@@ -288,11 +288,11 @@ export default function ZFSSnapshotPage() {
 
           {/* SAFETY BOX */}
           <section className="rounded-2xl border border-red-500/60 bg-red-500/10 p-4 shadow-lg shadow-red-900/40 space-y-2">
-            <h3 className="flex items-center gap-2 text-sm font-semibold text-red-300">
+            <h3 className="flex items-center gap-2 text-sm font-semibold text-red-600">
               <FiAlertTriangle /> Important Notes
             </h3>
 
-            <ul className="list-disc pl-5 text-[13px] text-red-200 space-y-1">
+            <ul className="list-disc pl-5 text-[13px] dark:text-red-200 space-y-1">
               <li>
                 Rollback DELETES all data created after snapshot (be careful).
               </li>
@@ -308,7 +308,7 @@ export default function ZFSSnapshotPage() {
               </li>
             </ul>
 
-            <p className="flex items-center gap-1 text-xs text-red-200 mt-1">
+            <p className="flex items-center gap-1 text-xs text-red-600 mt-1">
               Next: ZFS clone & send/receive for enterprise-grade backups.
               <FiArrowRight />
             </p>

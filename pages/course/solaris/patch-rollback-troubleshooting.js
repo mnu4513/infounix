@@ -216,11 +216,11 @@ export default function PatchRollbackTroubleshootingPage() {
             Solaris · Lesson 24
           </p>
 
-          <h1 className="mt-1 text-3xl font-semibold text-[#ff5b5b]">
+          <h1 className="mt-1 text-3xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
             {lesson.title || "Patch Rollback & Troubleshooting in Solaris 11"}
           </h1>
 
-          <p className="mt-1 max-w-3xl text-sm text-slate-300">
+          <p className="mt-1 max-w-3xl text-sm dark:text-slate-300">
             Even with careful planning, patches can break things. This lesson
             shows how to handle two critical scenarios: server not booting after
             patching, and application issues after patching. You will learn how
@@ -231,27 +231,30 @@ export default function PatchRollbackTroubleshootingPage() {
           <div className="mt-3 h-px w-full bg-gradient-to-r from-[#ff5b5b] via-slate-700 to-transparent" />
         </motion.header>
 
-        {/* VIDEO */}
+                  {/* VIDEO */}
         <motion.div
           initial="hidden"
           animate="visible"
-          variants={fadeUp(0.05)}
-          className="mb-8 overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 shadow-xl shadow-slate-950/80"
+          variants={fadeUp(0.1)}
+          className="mb-6 overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 shadow-lg shadow-slate-950/80"
         >
           {lesson.videoUrl ? (
             <div className="aspect-video w-full">
               <iframe
                 src={lesson.videoUrl}
-                title={lesson.title || "Patch Rollback & Troubleshooting"}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                title={lesson.title || "Installation and Setup"}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 className="h-full w-full"
               />
             </div>
           ) : (
-            <div className="flex aspect-video items-center justify-center text-xs text-slate-400">
-              Add your rollback/troubleshooting video URL in{" "}
-              <code>solarisLessons.js</code>.
+            <div className="flex aspect-video w-full items-center justify-center text-xs text-slate-400">
+              Add the YouTube embed URL for this lesson in{" "}
+              <code className="mx-1 rounded bg-slate-900 px-1">
+                components/solaris/solarisLessons.js
+              </code>
+              .
             </div>
           )}
         </motion.div>
@@ -261,11 +264,11 @@ export default function PatchRollbackTroubleshootingPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.1)}
-          className="space-y-10 text-sm leading-relaxed text-slate-200"
+          className="space-y-10 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* THEORY: BE-based rollback concept */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Theory: Why Solaris patch rollback is BE-centric
             </h2>
             <p>
@@ -296,7 +299,7 @@ export default function PatchRollbackTroubleshootingPage() {
 
           {/* High-level scenarios */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Two main failure scenarios after patching
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
@@ -322,7 +325,7 @@ export default function PatchRollbackTroubleshootingPage() {
 
           {/* TERMINAL EXAMPLES SECTION */}
           <section className="space-y-6">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Practical rollback flows – commands & explanation
             </h2>
             <p>
@@ -332,10 +335,10 @@ export default function PatchRollbackTroubleshootingPage() {
 
             {rollbackSnippets.map((snippet, index) => (
               <div key={snippet.id} className="space-y-2">
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold dark:text-slate-100">
                   {index + 1}. {snippet.title}
                 </h3>
-                <p className="text-xs text-slate-300">{snippet.description}</p>
+                <p className="text-xs dark:text-slate-300">{snippet.description}</p>
                 <TerminalOutput
                   content={snippet.content}
                   title="terminal — rollback"
@@ -348,7 +351,7 @@ export default function PatchRollbackTroubleshootingPage() {
 
           {/* HOW-TO: choosing approach */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#ff5b5b]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               How to decide rollback approach
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
@@ -375,11 +378,11 @@ export default function PatchRollbackTroubleshootingPage() {
 
           {/* Safety block */}
           <section className="space-y-3 rounded-2xl border border-red-500/60 bg-red-500/10 p-4 shadow-lg shadow-red-900/40">
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-300">
+            <h2 className="flex items-center gap-2 text-sm font-semibold text-red-600">
               <FiAlertTriangle className="text-base" />
               Safety tips for patch rollback
             </h2>
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-red-200">
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] dark:text-red-200">
               <li>
                 Never run <code>pkg undo</code>-style experiments on production
                 unless specifically recommended by Oracle; rely on BEs instead.
@@ -398,7 +401,7 @@ export default function PatchRollbackTroubleshootingPage() {
                 what went wrong before attempting patch again.
               </li>
             </ul>
-            <p className="mt-2 flex items-center gap-1 text-[12px] text-red-200">
+            <p className="mt-2 flex items-center gap-1 text-[12px] text-red-600">
               Once you are comfortable with BEs, patching and rollback in
               Solaris 11 becomes much less scary — it&apos;s basically branch &
               switch rather than manual downgrade.
