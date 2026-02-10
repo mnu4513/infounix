@@ -30,7 +30,7 @@ const SolarisLayout = ({ children, activeSlug }) => {
   const handleCloseSidebar = () => setSidebarOpen(false);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-50 antialiased">
+    <div className="min-h-screen bg-slate-200 dark:bg-slate-950 text-slate-950 dark:text-slate-50 antialiased">
       <Navbar />
 
       <div className="relative mx-auto flex max-w-6xl gap-4 px-4 pb-10 pt-5 md:px-6 lg:px-8">
@@ -44,13 +44,13 @@ const SolarisLayout = ({ children, activeSlug }) => {
 
         {/* SIDEBAR */}
         <aside
-          className={`fixed inset-y-0 left-0 z-40 w-64 h-screen transform bg-slate-950/95 p-3 shadow-xl shadow-slate-950/90 ring-1 ring-slate-800 overflow-y-auto transition-transform
+          className={`fixed inset-y-0 left-0 z-40 w-64 h-screen transform bg-slate-200 dark:bg-slate-950/95 p-3 shadow-xl shadow-slate-950/90 ring-1 ring-slate-800 overflow-y-auto transition-transform
           md:static md:z-0 md:h-auto md:overflow-visible md:translate-x-0
           ${sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}`}
         >
           <div className="mb-3 flex items-center justify-between md:mb-4">
             <div>
-              <p className="text-xs font-semibold text-slate-100">
+              <p className="text-xs font-semibold text-slate-800 dark:text-slate-100">
                 Solaris Course
               </p>
               <p className="text-[11px] text-slate-400">
@@ -84,8 +84,8 @@ const SolarisLayout = ({ children, activeSlug }) => {
                   className={`flex w-full items-center gap-2 rounded-2xl px-2.5 py-2 text-left transition
                   ${
                     isActive
-                      ? "bg-sky-500/20 text-sky-200 ring-1 ring-sky-500"
-                      : "bg-slate-950/70 text-slate-200 hover:bg-slate-900/80 hover:text-sky-200"
+                      ? "bg-sky-200 from-sky-400 via-fuchsia-400 to-emerald-400 ring-1 ring-sky-500 dark:bg-slate-500"
+                      : "bg-sky-100 from-sky-400 via-fuchsia-400 to-emerald-400 ring-1 ring-sky-500 dark:bg-slate-800 "
                   }`}
                 >
                   <span className="flex h-7 w-7 items-center justify-center rounded-full bg-slate-900/80 text-[13px]">
