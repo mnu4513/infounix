@@ -9,7 +9,7 @@ import {
 } from "react-icons/fi";
 
 import ShellLayout from "../../../components/shell/ShellLayout";
-import { shellLessons } from "../../../components/shell/shellLessons";
+import { ShellLessons } from "../../../components/shell/ShellLessons";
 import FeatureCard from "../../../components/solaris/FeatureCard";
 import BulletCard from "../../../components/solaris/BulletCard";
 import TerminalOutput from "../../../components/TerminalOutput";
@@ -62,7 +62,7 @@ $ pwd
 
 export default function LinuxShellPage() {
   const lesson =
-    shellLessons.find((l) => l.slug === "basic-linux-shell") || {};
+    ShellLessons.find((l) => l.slug === "basic-linux-shell") || {};
 
   return (
     <>
@@ -90,7 +90,7 @@ export default function LinuxShellPage() {
           <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
             Shell Scripting · Lesson 2
           </p>
-          <h1 className="mt-1 text-2xl font-semibold text-[#22c55e] md:text-3xl">
+          <h1 className="mt-1 text-2xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent md:text-3xl">
             {lesson.title || "Linux Shell Basics"}
           </h1>
           {lesson.short && (
@@ -122,7 +122,7 @@ export default function LinuxShellPage() {
             <div className="flex aspect-video w-full items-center justify-center text-xs text-slate-400">
               Add YouTube embed URL in{" "}
               <code className="mx-1 rounded bg-slate-900 px-1">
-                components/shell/shellLessons.js
+                components/shell/ShellLessons.js
               </code>
             </div>
           )}
@@ -137,7 +137,7 @@ export default function LinuxShellPage() {
         >
           {/* WHAT IS SHELL */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#22c55e]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               What is a Linux Shell?
             </h2>
             <p>
@@ -154,7 +154,7 @@ export default function LinuxShellPage() {
 
           {/* CORE CONCEPTS */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#22c55e]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Core Concepts of Shell
             </h2>
 
@@ -179,7 +179,7 @@ export default function LinuxShellPage() {
 
           {/* COMMANDS */}
           <section className="space-y-5">
-            <h2 className="text-base font-semibold text-[#22c55e]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Basic Shell Commands
             </h2>
 
@@ -201,7 +201,7 @@ export default function LinuxShellPage() {
 
           {/* TIPS */}
           <section className="space-y-3">
-            <h2 className="text-base font-semibold text-[#22c55e]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Helpful Tips for Beginners
             </h2>
             <div className="grid gap-3 md:grid-cols-2">

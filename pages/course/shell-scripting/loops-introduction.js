@@ -9,7 +9,7 @@ import {
 } from "react-icons/fi";
 
 import ShellLayout from "../../../components/shell/ShellLayout";
-import { shellLessons } from "../../../components/shell/shellLessons";
+import { ShellLessons } from "../../../components/shell/ShellLessons";
 import FeatureCard from "../../../components/solaris/FeatureCard";
 import BulletCard from "../../../components/solaris/BulletCard";
 import TerminalOutput from "../../../components/TerminalOutput";
@@ -64,7 +64,7 @@ done`,
 
 export default function LoopsIntroPage() {
   const lesson =
-    shellLessons.find((l) => l.slug === "loops") || {};
+    ShellLessons.find((l) => l.slug === "loops") || {};
 
   return (
     <>
@@ -124,7 +124,7 @@ export default function LoopsIntroPage() {
             <div className="flex aspect-video w-full items-center justify-center text-xs text-slate-400">
               Add YouTube embed URL in{" "}
               <code className="mx-1 rounded bg-slate-900 px-1">
-                components/shell/shellLessons.js
+                components/shell/ShellLessons.js
               </code>
             </div>
           )}

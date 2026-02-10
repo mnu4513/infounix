@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { FiTerminal, FiZap, FiFileText } from "react-icons/fi";
 
 import ShellLayout from "../../../components/shell/ShellLayout";
-import { shellLessons } from "../../../components/shell/shellLessons";
+import { ShellLessons } from "../../../components/shell/ShellLessons";
 import FeatureCard from "../../../components/solaris/FeatureCard";
 import BulletCard from "../../../components/solaris/BulletCard";
 import TerminalOutput from "../../../components/TerminalOutput";
@@ -22,7 +22,7 @@ const fadeUp = (delay = 0) => ({
 
 export default function IntroductionToShellScriptingPage() {
   const lesson =
-    shellLessons.find(
+    ShellLessons.find(
       (l) => l.slug === "introduction-to-shell-scripting"
     ) || {};
 
@@ -54,11 +54,11 @@ export default function IntroductionToShellScriptingPage() {
             Shell Scripting · Lesson 1
           </p>
 
-          <h1 className="mt-1 text-3xl font-semibold text-[#22c55e]">
+          <h1 className="mt-1 text-3xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
             Introduction to Shell Scripting
           </h1>
 
-          <p className="mt-2 max-w-3xl text-sm text-slate-300">
+          <p className="mt-2 max-w-3xl text-sm dark:text-slate-300">
             Shell scripting is one of the most powerful tools for Unix/Linux
             admins and DevOps engineers. In this lesson, we’ll see what a shell
             is, what a shell script actually does, why you should use it, and
@@ -88,7 +88,7 @@ export default function IntroductionToShellScriptingPage() {
           ) : (
             <div className="flex aspect-video items-center justify-center text-xs text-slate-400">
               Add your shell scripting intro video URL in{" "}
-              <code>shellLessons.js</code>.
+              <code>ShellLessons.js</code>.
             </div>
           )}
         </motion.div>
@@ -98,11 +98,11 @@ export default function IntroductionToShellScriptingPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp(0.1)}
-          className="space-y-10 text-sm leading-relaxed text-slate-200"
+          className="space-y-10 text-sm leading-relaxed dark:text-slate-200"
         >
           {/* WHAT & WHY */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#22c55e]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               What is a shell? What is a shell script?
             </h2>
 
@@ -144,14 +144,14 @@ export default function IntroductionToShellScriptingPage() {
 
           {/* HOW SHELL EXECUTES COMMANDS */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#22c55e]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               How does the shell execute commands?
             </h2>
             <p>
               When you type a command like <code>ls /var/log</code>, the shell:
             </p>
 
-            <ol className="list-decimal space-y-1 pl-5 text-xs text-slate-200">
+            <ol className="list-decimal space-y-1 pl-5 text-xs dark:text-slate-200">
               <li>Reads your input line.</li>
               <li>Splits it into command (<code>ls</code>) and arguments.</li>
               <li>Searches for the command in your <code>PATH</code>.</li>
@@ -180,7 +180,7 @@ ls /var/log
 echo $?   # 0 means success`}
             />
 
-            <p className="text-xs text-slate-400">
+            <p className="text-xs dark:text-slate-400">
               In scripts, you will use the exit status <code>$?</code> a lot to
               decide if previous command succeeded or failed.
             </p>
@@ -188,7 +188,7 @@ echo $?   # 0 means success`}
 
           {/* FIRST SCRIPT */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#22c55e]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Writing your first shell script (safely)
             </h2>
 
@@ -211,10 +211,10 @@ echo "You are logged in as: $USER"
 echo "Your current directory is: $(pwd)"`}
             />
 
-            <p className="text-xs text-slate-400">
+            <p className="text-xs dark:text-slate-400">
               Explanation:
             </p>
-            <ul className="list-disc space-y-1 pl-5 text-xs text-slate-200">
+            <ul className="list-disc space-y-1 pl-5 text-xs dark:text-slate-200">
               <li>
                 <code>#!/bin/bash</code> – shebang; tells the OS to use{" "}
                 <code>/bin/bash</code> to run this file.
@@ -230,7 +230,7 @@ echo "Your current directory is: $(pwd)"`}
               </li>
             </ul>
 
-            <h3 className="mt-2 text-sm font-semibold text-slate-100">
+            <h3 className="mt-2 text-sm font-semibold dark:text-slate-100">
               Making the script executable and running it
             </h3>
 
@@ -252,7 +252,7 @@ chmod +x first_script.sh
 bash first_script.sh`}
             />
 
-            <p className="text-xs text-slate-400">
+            <p className="text-xs dark:text-slate-400">
               Real-life practice: always start with harmless scripts like echo,
               date, pwd, whoami. Never start learning by writing scripts that
               delete or move files.
@@ -261,7 +261,7 @@ bash first_script.sh`}
 
           {/* WHERE TO STORE SCRIPTS / PERMISSIONS */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#22c55e]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Where to keep scripts & basic permissions
             </h2>
 
@@ -294,9 +294,9 @@ source ~/.bash_profile
 first_script.sh`}
             />
 
-            <p className="text-xs text-slate-400">
+            <p className="text-xs dark:text-slate-400">
               Real-life example:{" "}
-              <span className="text-slate-200">
+              <span className="dark:text-slate-200">
                 “In admin environments, we keep custom scripts under a common
                 path like <code>/opt/scripts</code> or{" "}
                 <code>/usr/local/sbin</code> with version control. For personal
@@ -308,7 +308,7 @@ first_script.sh`}
 
           {/* REAL USE CASE EXAMPLES */}
           <section className="space-y-4">
-            <h2 className="text-base font-semibold text-[#22c55e]">
+            <h2 className="text-base font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Practical use cases even for beginners
             </h2>
 
@@ -343,7 +343,7 @@ done`}
 />
 
 
-            <ul className="list-disc space-y-1 pl-5 text-xs text-slate-200">
+            <ul className="list-disc space-y-1 pl-5 text-xs dark:text-slate-200">
               <li>
                 This is already useful in real environments, and you wrote it
                 with only basic shell features.
@@ -357,10 +357,10 @@ done`}
 
           {/* NEXT STEPS */}
           <section className="space-y-3 rounded-2xl border border-emerald-500/50 bg-emerald-500/10 p-4 shadow-lg shadow-emerald-900/40">
-            <h2 className="text-sm font-semibold text-emerald-200">
+            <h2 className="text-sm font-semibold text-emerald-600">
               What you should be comfortable with after this lesson
             </h2>
-            <ul className="list-disc pl-5 text-[13px] text-emerald-50 space-y-1">
+            <ul className="list-disc pl-5 text-[13px] dark:text-emerald-50 space-y-1">
               <li>Explain what a shell and a shell script are.</li>
               <li>
                 Create, save and run a simple script using{" "}
@@ -371,7 +371,7 @@ done`}
               </li>
               <li>Know where to keep your scripts and how to add to PATH.</li>
             </ul>
-            <p className="mt-1 text-[12px] text-emerald-200">
+            <p className="mt-1 text-[12px] text-emerald-600">
               In the next lessons, we’ll dive into variables, quoting, user
               input, conditions and loops so you can build powerful real-world
               automation.

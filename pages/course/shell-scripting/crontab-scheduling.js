@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { FiClock, FiCalendar, FiArrowRight } from "react-icons/fi";
 
 import ShellLayout from "../../../components/shell/ShellLayout";
-import { shellLessons } from "../../../components/shell/shellLessons";
+import { ShellLessons } from "../../../components/shell/ShellLessons";
 import FeatureCard from "../../../components/solaris/FeatureCard";
 import BulletCard from "../../../components/solaris/BulletCard";
 import TerminalOutput from "../../../components/TerminalOutput";

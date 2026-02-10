@@ -12,7 +12,7 @@ export default function BackupAutomation() {
         <title>Backup Automation Script | Shell Scripting</title>
       </Head>
 
-      <h1 className="text-2xl font-semibold text-[#22c55e]">Backup Automation Script</h1>
+      <h1 className="text-2xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">Backup Automation Script</h1>
 
       <p className="mt-2 text-slate-300">
         This script creates compressed backups with timestamps.

@@ -17,16 +17,16 @@ export default function ShellOverviewPage() {
 
       <ShellLayout>
         <header className="mb-6">
-          <h1 className="text-2xl font-semibold text-[#22c55e] md:text-3xl">
+          <h1 className="text-2xl font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent md:text-3xl">
             Shell Scripting Course
           </h1>
-          <p className="mt-1 text-sm text-slate-300">
+          <p className="mt-1 text-sm dark:text-slate-300">
             (Shell Scripting Course for Beginners)
           </p>
           <hr className="mt-3 border-slate-800" />
         </header>
 
-        <div className="space-y-6 text-sm leading-relaxed text-slate-200">
+        <div className="space-y-6 text-sm leading-relaxed dark:text-slate-200">
           <section>
             <p>
               Learn essential skills and techniques for efficiently managing
@@ -43,7 +43,7 @@ export default function ShellOverviewPage() {
           <hr className="border-slate-800" />
 
           <section>
-            <h2 className="text-lg font-semibold text-[#22c55e]">
+            <h2 className="text-lg font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Prerequisites
             </h2>
             <p className="mt-2">
@@ -61,7 +61,7 @@ export default function ShellOverviewPage() {
           <hr className="border-slate-800" />
 
           <section>
-            <h2 className="text-lg font-semibold text-[#22c55e]">
+            <h2 className="text-lg font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Who Should Enroll?
             </h2>
             <p className="mt-2">This course is ideal for:</p>
@@ -80,7 +80,7 @@ export default function ShellOverviewPage() {
           <hr className="border-slate-800" />
 
           <section>
-            <h2 className="text-lg font-semibold text-[#22c55e]">
+            <h2 className="text-lg font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Course Format
             </h2>
             <p className="mt-2">This course includes:</p>

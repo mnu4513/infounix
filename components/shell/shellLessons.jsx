@@ -1,6 +1,6 @@
 // components/shell/shellLessons.js
 
-export const shellLessons = [
+export const ShellLessons = [
   {
     id: "shell-intro",
     slug: "shell-intro",
