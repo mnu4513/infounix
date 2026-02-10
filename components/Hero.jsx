@@ -14,7 +14,7 @@ const fadeUp = (delay = 0) => ({
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-slate-950 pb-16 pt-10 text-slate-50">
+    <section className="relative overflow-hidden bg-slate-200 text-blue-400 dark:text-red-600 pb-16 pt-10 dark:bg-slate-950">
       {/* Background gradients */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -left-20 -top-32 h-72 w-72 rounded-full bg-fuchsia-500/30 blur-3xl" />
@@ -51,7 +51,7 @@ const Hero = () => {
 
           <motion.p
             variants={fadeUp(0.2)}
-            className="max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base"
+            className="max-w-xl text-sm leading-relaxed font-serif text-slate-700 sm:text-base dark:text-red-100"
           >
             infounix.com gives you practical tutorials, shell scripts, and
             troubleshooting notes that match what you actually do on servers:
@@ -83,12 +83,12 @@ const Hero = () => {
             className="flex flex-wrap gap-6 text-xs text-slate-400"
           >
             <div>
-              <p className="font-semibold text-slate-100">For Beginners</p>
-              <p>Simple explanations with live commands & outputs.</p>
+              <p className="font-semibold text-slate-600 dark:text-white font-serif">For Beginners</p>
+              <p className="text-slate-600 dark:text-white font-serif">Simple explanations with live commands & outputs.</p>
             </div>
             <div>
-              <p className="font-semibold text-slate-100">For Admins</p>
-              <p>Real incidents, service failures & fixes.</p>
+              <p className="font-semibold text-slate-600 dark:text-white font-serif">For Admins</p>
+              <p className="text-slate-600 dark:text-white font-serif">Real incidents, service failures & fixes.</p>
             </div>
           </motion.div>
         </motion.div>

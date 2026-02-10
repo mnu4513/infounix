@@ -25,12 +25,12 @@ const BlogPreview = () => {
   return (
     <section
       id="blog"
-      className="bg-slate-950 py-14 text-slate-50"
+      className="relative overflow-hidden bg-slate-200 text-gray-600 dark:text-red-100 pb-16 pt-10 dark:bg-slate-950"
     >
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
         <div className="mb-6 flex items-center justify-between gap-4">
           <div>
-            <h2 className="text-lg font-semibold tracking-tight sm:text-xl">
+            <h2 className="text-lg bg-gradient-to-r font-bold from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
               Latest from the blog
             </h2>
             <p className="text-xs text-slate-400 sm:text-sm">

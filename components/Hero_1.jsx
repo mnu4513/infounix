@@ -14,7 +14,7 @@ const fadeUp = (delay = 0) => ({
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-slate-950 pb-16 pt-10 text-slate-50">
+    <section className="relative overflow-hidden bg-slate-200 text-gray-600 dark:text-red-100 pb-16 pt-10 dark:bg-slate-950">
 
 
       <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 md:grid-cols-2 md:px-6 lg:px-8">
@@ -29,7 +29,7 @@ const Hero = () => {
       What you&apos;ll learn on{" "}
       <span className="text-sky-400">InfoUnix</span>
     </h2>
-    <p className="mt-2 text-xs text-slate-400 sm:text-sm">
+    <p className="mt-2 text-xs text-slate-800 dark:text-white sm:text-sm">
       Start from basics, move to production-grade troubleshooting.
     </p>
 
@@ -69,12 +69,12 @@ const Hero = () => {
           initial={{ opacity: 0, x: 60, scale: 0.95 }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="relative flex items-center justify-center"
+          className="relative flex items-center justify-center "
         >
           <motion.div
             animate={{ y: [-10, 10, -10] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="relative h-full w-full max-w-md rounded-3xl p-5 shadow-2xl shadow-slate-950/80 backdrop-blur"
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="relative h-full w-full max-w-md rounded-3xl p-5  shadow-2xl shadow-slate-950/80 backdrop-blur"
           >
        <img
           src="/images/business.svg"
@@ -85,7 +85,7 @@ const Hero = () => {
           </motion.div>
 
           <div className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center">
-            <div className="h-64 w-64 rounded-full border border-sky-500/40 bg-sky-500/10 blur-3xl" />
+            <div className="h-64 w-64 rounded-full  border border-sky-500/40 bg-sky-500/10 blur-3xl" />
           </div>
         </motion.div>
       </div>

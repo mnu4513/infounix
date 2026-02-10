@@ -21,7 +21,7 @@ export default function HomePage() {
         />
       </Head>
 
-      <div className="min-h-screen bg-slate-950 text-slate-50 antialiased dark:bg-slate-950">
+      <div className="min-h-screen bg-red-50 text-slate-50 antialiased dark:bg-slate-950 dark:text-white">
         <Navbar />
         <Hero />
         <Hero_1/>
