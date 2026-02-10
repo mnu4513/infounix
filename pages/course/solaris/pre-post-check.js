@@ -4,7 +4,7 @@ import React from "react";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import SolarisLayout from "../../../components/solaris/SolarisLayout";
-import { solarisLessons } from "../../../components/solaris/solarisLessons";
+import { solarisLessons } from "../../../components/solaris/SolarisLessons";
 import TerminalOutput from "../../../components/TerminalOutput";
 import FeatureCard from "../../../components/solaris/FeatureCard";
 import BulletCard from "../../../components/solaris/BulletCard";

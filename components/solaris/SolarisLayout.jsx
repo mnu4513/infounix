@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { FiMenu, FiX, FiPlayCircle } from "react-icons/fi";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-import { solarisLessons } from "./solarisLessons";
+import { solarisLessons } from "./SolarisLessons";
 
 const SolarisLayout = ({ children, activeSlug }) => {
   const router = useRouter();

@@ -11,7 +11,7 @@ import {
 } from "react-icons/fi";
 
 import SolarisLayout from "../../../components/solaris/SolarisLayout";
-import { solarisLessons } from "../../../components/solaris/solarisLessons";
+import { solarisLessons } from "../../../components/solaris/SolarisLessons";
 import BulletCard from "../../../components/solaris/BulletCard";
 import FeatureCard from "../../../components/solaris/FeatureCard";
 import TerminalOutput from "../../../components/TerminalOutput";
@@ -134,7 +134,7 @@ export default function LdomsDynamicResourcesPage() {
           )}
         </motion.div>
 
-        
+
         {/* MAIN CONTENT */}
         <motion.div
           initial="hidden"

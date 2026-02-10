@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { FiLayers, FiCpu, FiHardDrive } from "react-icons/fi";
 
 import SolarisLayout from "../../../components/solaris/SolarisLayout";
-import { solarisLessons } from "../../../components/solaris/solarisLessons";
+import { solarisLessons } from "../../../components/solaris/SolarisLessons";
 import BulletCard from "../../../components/solaris/BulletCard";
 import FeatureCard from "../../../components/solaris/FeatureCard";
 import TerminalOutput from "../../../components/TerminalOutput";

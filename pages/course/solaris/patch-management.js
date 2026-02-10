@@ -13,9 +13,10 @@ import {
   FiShield,
   FiArrowRight,
 } from "react-icons/fi";
+import Image from "next/image";
 
 import SolarisLayout from "../../../components/solaris/SolarisLayout";
-import { solarisLessons } from "../../../components/solaris/solarisLessons";
+import { solarisLessons } from "../../../components/solaris/SolarisLessons";
 import FeatureCard from "../../../components/solaris/FeatureCard";
 import BulletCard from "../../../components/solaris/BulletCard";
 import TerminalOutput from "../../../components/TerminalOutput";
@@ -348,7 +349,7 @@ export default function PatchManagementPage() {
 
 
         {/* OPTIONAL IMAGE / SHOWERHEAD AREA – MOS DOWNLOAD STEPS */}
-        {/* Replace <img> URLs with your Cloudinary images. If you have a custom ShowerHead component,
+        {/* Replace <> URLs with your Cloudinary images. If you have a custom ShowerHead component,
             you can wrap this markup or pass the URLs as props into it. */}
          <section className="space-y-3">
 <h2 className="mb-2 text-sm font-semibold bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
@@ -364,21 +365,21 @@ export default function PatchManagementPage() {
           <div className="mt-3 gap-y-3">
             {/* EXAMPLE: replace src with your Cloudinary URLs */}
             <div className="overflow-hidden rounded-xl border border-slate-800 bg-slate-900/80">
-              <img
+              <Image
                 src="https://res.cloudinary.com/dyjpzvstq/image/upload/v1709985632/mypopnykectzb02cwvqv"
                 alt="My Oracle Support - search SRU"
                 className="h-full w-full object-cover"
               />
             </div>
             <div className="overflow-hidden rounded-xl border my-3 border-slate-800 bg-slate-900/80">
-              <img
+              <Image
                 src="https://res.cloudinary.com/dyjpzvstq/image/upload/v1709985632/nrexg1pfgyx65jyjfh9a"
                 alt="Download zipped SRU repository"
                 className="h-full w-full object-cover"
               />
             </div>
             <div className="overflow-hidden rounded-xl border border-slate-800 bg-slate-900/80">
-              <img
+              <Image
                 src="https://res.cloudinary.com/dyjpzvstq/image/upload/v1709985632/gph6zgiyjynsrzgoaauo"
                 alt="Download zipped SRU repository"
                 className="h-full w-full object-cover"

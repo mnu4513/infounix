@@ -6,7 +6,8 @@ import { motion } from "framer-motion";
 import SolarisLayout from "../../../components/solaris/SolarisLayout";
 import FeatureCard from "../../../components/solaris/FeatureCard";
 import BulletCard from "../../../components/solaris/BulletCard";
-import { solarisLessons } from "../../../components/solaris/solarisLessons";
+import { solarisLessons } from "../../../components/solaris/SolarisLessons";
+
 import {
   FiShield,
   FiServer,

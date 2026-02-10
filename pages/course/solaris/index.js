@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import SolarisLayout from "../../../components/solaris/SolarisLayout";
-import { solarisLessons } from "../../../components/solaris/solarisLessons";
+import { solarisLessons } from "../../../components/solaris/SolarisLessons";
 import { motion } from "framer-motion";
 const fadeUp = (delay = 0) => ({
   hidden: { opacity: 0, y: 30 },

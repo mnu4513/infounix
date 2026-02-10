@@ -29,8 +29,7 @@ const whileLoopExamples = [
   {
     id: "basic-while",
     title: "Basic While Loop",
-    description:
-      "Runs while the condition remains true.",
+    description: "Runs while the condition remains true.",
     content: `count=1
 
 while [ $count -le 5 ]
@@ -42,8 +41,7 @@ done`,
   {
     id: "while-user-input",
     title: "While Loop with User Input",
-    description:
-      "Loop continues until user enters 'exit'.",
+    description: "Loop continues until user enters 'exit'.",
     content: `while true
 do
   read -p "Enter command (type exit to quit): " cmd
@@ -56,8 +54,7 @@ done`,
   {
     id: "read-file",
     title: "Read File Using While Loop",
-    description:
-      "Reading a file line by line using while loop.",
+    description: "Reading a file line by line using while loop.",
     content: `while read line
 do
   echo "Line: $line"
@@ -66,8 +63,7 @@ done < file.txt`,
   {
     id: "infinite-loop",
     title: "Infinite While Loop",
-    description:
-      "A loop that runs forever until manually stopped.",
+    description: "A loop that runs forever until manually stopped.",
     content: `while true
 do
   echo "Running..."
@@ -106,14 +102,17 @@ export default function WhileLoopPage() {
           <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
             Shell Scripting · Lesson 11
           </p>
+
           <h1 className="mt-1 text-2xl font-semibold text-[#22c55e] md:text-3xl">
             {lesson.title || "While Loop in Shell Scripting"}
           </h1>
+
           {lesson.short && (
             <p className="mt-1 max-w-2xl text-sm text-slate-300">
               {lesson.short}
             </p>
           )}
+
           <div className="mt-3 h-px w-full bg-gradient-to-r from-[#22c55e] via-slate-700 to-transparent" />
         </motion.header>
 
@@ -156,10 +155,12 @@ export default function WhileLoopPage() {
             <h2 className="text-base font-semibold text-[#22c55e]">
               What is a While Loop?
             </h2>
+
             <p>
               A <strong>while loop</strong> executes a block of code repeatedly
               as long as the given condition evaluates to true.
             </p>
+
             <p>
               It is commonly used when the number of iterations is not known in
               advance.
@@ -171,17 +172,20 @@ export default function WhileLoopPage() {
             <h2 className="text-base font-semibold text-[#22c55e]">
               Why Use a While Loop?
             </h2>
+
             <div className="grid gap-4 md:grid-cols-3">
               <FeatureCard
                 icon={<FiRepeat className="text-lg" />}
                 title="Dynamic Conditions"
                 text="Run until a condition becomes false."
               />
+
               <FeatureCard
                 icon={<FiClock className="text-lg" />}
                 title="Wait & Monitor"
                 text="Useful for monitoring logs, processes, or input."
               />
+
               <FeatureCard
                 icon={<FiRefreshCcw className="text-lg" />}
                 title="Control Flow"
@@ -195,6 +199,7 @@ export default function WhileLoopPage() {
             <h2 className="text-base font-semibold text-[#22c55e]">
               While Loop Syntax
             </h2>
+
             <TerminalOutput
               content={`while [ condition ]
 do
@@ -217,9 +222,11 @@ done`}
                 <h3 className="text-sm font-semibold text-slate-100">
                   {index + 1}. {item.title}
                 </h3>
+
                 <p className="text-xs text-slate-300">
                   {item.description}
                 </p>
+
                 <TerminalOutput
                   content={item.content}
                   title="terminal — bash"
@@ -235,6 +242,7 @@ done`}
             <h2 className="text-base font-semibold text-[#22c55e]">
               Best Practices
             </h2>
+
             <BulletCard
               heading="Loop Best Practices"
               points={[
@@ -251,11 +259,13 @@ done`}
             <h2 className="flex items-center gap-2 text-sm font-semibold text-green-200">
               Practice Task – While Loop
             </h2>
+
             <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] text-green-50">
               <li>Create a loop that prints numbers from 1 to 10.</li>
-              <li>Create a loop that waits until user types "exit".</li>
+              <li>Create a loop that waits until user types &quot;exit&quot;.</li>
               <li>Create a loop that reads a file line by line.</li>
             </ul>
+
             <p className="mt-2 flex items-center gap-1 text-[12px] text-green-200">
               Next lesson: Until Loop
               <FiArrowRight className="text-xs" />

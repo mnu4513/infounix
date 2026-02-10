@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { FiTrash2, FiAlertTriangle } from "react-icons/fi";
 
 import SolarisLayout from "../../../components/solaris/SolarisLayout";
-import { solarisLessons } from "../../../components/solaris/solarisLessons";
+import { solarisLessons } from "../../../components/solaris/SolarisLessons";
 import BulletCard from "../../../components/solaris/BulletCard";
 import TerminalOutput from "../../../components/TerminalOutput";
 
@@ -113,7 +113,7 @@ export default function LdomsCleanupPage() {
           )}
         </motion.div>
 
-        
+
         <motion.div
           initial="hidden"
           animate="visible"
