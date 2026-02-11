@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
-import { FiPlayCircle, FiBookOpen } from "react-icons/fi";
+
 
 const fadeUp = (delay = 0) => ({
   hidden: { opacity: 0, y: 40 },

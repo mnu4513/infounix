@@ -8,6 +8,7 @@ import {
 import ThemeToggle from "./ThemeToggle";
 import { motion, AnimatePresence } from "framer-motion";
 
+
 const Navbar = () => {
   // MOBILE MENU STATE
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -21,7 +22,10 @@ const Navbar = () => {
           <Link href="/">
             <div className="flex cursor-pointer items-center gap-3">
               <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-slate-900 ring-1 ring-slate-700">
-                <FiTerminal className="text-lg text-sky-400" />
+                <img src="/images/icon.png"
+                alt="icon"
+                className="w-6"
+                />
               </div>
 
               <div>
