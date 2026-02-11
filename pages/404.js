@@ -9,9 +9,6 @@ export default function NotFound() {
   const router = useRouter();
 
   return (
-    <>
-    <Navbar/>
-
     <div
       className="relative min-h-screen overflow-hidden
       bg-[#9fa5b4] dark:bg-[#050505]
@@ -160,7 +157,5 @@ export default function NotFound() {
         </div>
       </div>
     </div>
-    <Footer/>
-    </>
   );
 }
