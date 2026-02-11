@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import examData from "../../data/exam/Solaris";
+import examData from "../../data/exam/Mysql";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 

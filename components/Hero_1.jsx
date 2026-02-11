@@ -64,30 +64,28 @@ const Hero = () => {
         </div>
         </motion.div>
 
-        {/* Right – floating terminal card */}
-        <motion.div
-          initial={{ opacity: 0, x: 60, scale: 0.95 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="relative flex items-center justify-center "
-        >
-          <motion.div
-            animate={{ y: [-10, 10, -10] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="relative h-full w-full max-w-md rounded-3xl p-5  shadow-2xl shadow-slate-950/80 backdrop-blur"
-          >
-       <img
-          src="/images/business.svg"
-          alt="bussiness image"
-          className="h-full w-full object-cover"
-          priority
-        />
-          </motion.div>
+        {/* Right – floating image */}
+<motion.div
+  initial={{ opacity: 0, x: 60, scale: 0.95 }}
+  animate={{ opacity: 1, x: 0, scale: 1 }}
+  transition={{ duration: 0.7, ease: "easeOut" }}
+  className="relative flex items-center justify-center"
+>
+  {/* Floating SVG directly */}
+  <motion.img
+    src="/images/business.svg"
+    alt="business image"
+    className="h-full w-full max-w-md object-contain"
+    animate={{ y: [-10, 10, -10] }}
+    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+  />
 
-          <div className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center">
-            <div className="h-64 w-64 rounded-full  border border-sky-500/40 bg-sky-500/10 blur-3xl" />
-          </div>
-        </motion.div>
+  {/* Optional glow behind image */}
+  <div className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center">
+    <div className="h-64 w-64 rounded-full border border-sky-500/40 bg-sky-500/10 blur-3xl" />
+  </div>
+</motion.div>
+
       </div>
     </section>
   );
