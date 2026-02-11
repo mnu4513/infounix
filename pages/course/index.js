@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const courses = [
   { slug: "solaris", name: "Solaris" },
@@ -33,7 +34,7 @@ export default function CoursesIndex() {
         </div>
       </div>
     </main>
-
+<Footer/>
      </>
   );
 }
